@@ -1,0 +1,1892 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.7": {
+      "mallenom.ffmpeg/1.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/mallenom.ffmpeg.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.ffmpeg.dll": {}
+        }
+      },
+      "mallenom.framework/2.8.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/mallenom.framework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.framework.dll": {}
+        }
+      },
+      "mallenom.imaging/3.7.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.framework": "2.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.imaging.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.imaging.dll": {}
+        }
+      },
+      "mallenom.imaging.compressed/3.7.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging": "3.7.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.imaging.compressed.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.imaging.compressed.dll": {}
+        }
+      },
+      "mallenom.math/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.framework": "2.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.math.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.math.dll": {}
+        }
+      },
+      "mallenom.neuronet/2.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/mallenom.neuronet.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.neuronet.dll": {}
+        }
+      },
+      "mallenom.video/4.8.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging": "3.7.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.dll": {}
+        }
+      },
+      "mallenom.video.dshow/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.dshow.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.dshow.dll": {}
+        }
+      },
+      "mallenom.video.ffmpeg/1.2.1": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.ffmpeg": "1.2.1",
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.ffmpeg.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.ffmpeg.dll": {}
+        }
+      },
+      "mallenom.video.ipcam/1.9.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging.compressed": "3.7.0",
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.ipcam.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.ipcam.dll": {}
+        }
+      },
+      "mallenom.video.ipcam.dshow/1.9.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.ipcam.dshow.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.ipcam.dshow.dll": {}
+        }
+      },
+      "NUnit/3.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/nunit.framework.dll": {}
+        }
+      },
+      "recar2.ui/0.2.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging": "3.7.0"
+        },
+        "compile": {
+          "lib/net45/recar2.ui.dll": {}
+        },
+        "runtime": {
+          "lib/net45/recar2.ui.dll": {}
+        }
+      },
+      "recar2.algorithms/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.platestencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.algorithms.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.algorithms.dll": {}
+        }
+      },
+      "recar2.algorithms.ui/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "mallenom.imaging": "3.7.0",
+          "mallenom.video": "4.8.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.composite": "1.0.0",
+          "recar2.convenient": "1.0.0",
+          "recar2.decisions": "1.0.0",
+          "recar2.motion": "1.0.0",
+          "recar2.platelocalization": "1.0.0",
+          "recar2.platestencil": "1.0.0",
+          "recar2.recogstencil": "1.0.0",
+          "recar2.ui": "0.2.0",
+          "recar2.vehicledetection": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.algorithms.ui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.algorithms.ui.dll": {}
+        }
+      },
+      "recar2.composite/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.convenient": "1.0.0",
+          "recar2.decisions": "1.0.0",
+          "recar2.motion": "1.0.0",
+          "recar2.platelocalization": "1.0.0",
+          "recar2.platestencil": "1.0.0",
+          "recar2.recogstencil": "1.0.0",
+          "recar2.vehicledetection": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.composite.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.composite.dll": {}
+        }
+      },
+      "recar2.convenient/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.convenient.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.convenient.dll": {}
+        }
+      },
+      "recar2.decisions/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.platestencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.decisions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.decisions.dll": {}
+        }
+      },
+      "recar2.models/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/recar2.models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.models.dll": {}
+        }
+      },
+      "recar2.models.loader/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.math": "1.5.0",
+          "mallenom.neuronet": "2.5.0",
+          "recar2.platestencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.models.loader.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.models.loader.dll": {}
+        }
+      },
+      "recar2.models.noenc/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/recar2.models.noenc.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.models.noenc.dll": {}
+        }
+      },
+      "recar2.motion/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.motion.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.motion.dll": {}
+        }
+      },
+      "recar2.platelocalization/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.platelocalization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.platelocalization.dll": {}
+        }
+      },
+      "recar2.platestencil/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/recar2.platestencil.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.platestencil.dll": {}
+        }
+      },
+      "recar2.recogstencil/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.models.loader": "1.0.0",
+          "recar2.platestencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.recogstencil.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.recogstencil.dll": {}
+        }
+      },
+      "recar2.tests.common/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "NUnit": "3.7.1",
+          "mallenom.imaging.compressed": "3.7.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.algorithms.ui": "1.0.0",
+          "recar2.composite": "1.0.0",
+          "recar2.convenient": "1.0.0",
+          "recar2.decisions": "1.0.0",
+          "recar2.models.loader": "1.0.0",
+          "recar2.models.noenc": "1.0.0",
+          "recar2.platestencil": "1.0.0",
+          "recar2.recogstencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.tests.common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.tests.common.dll": {}
+        }
+      },
+      "recar2.vehicledetection/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.recogstencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.vehicledetection.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.vehicledetection.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7/win": {
+      "mallenom.ffmpeg/1.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/mallenom.ffmpeg.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.ffmpeg.dll": {}
+        }
+      },
+      "mallenom.framework/2.8.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/mallenom.framework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.framework.dll": {}
+        }
+      },
+      "mallenom.imaging/3.7.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.framework": "2.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.imaging.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.imaging.dll": {}
+        }
+      },
+      "mallenom.imaging.compressed/3.7.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging": "3.7.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.imaging.compressed.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.imaging.compressed.dll": {}
+        }
+      },
+      "mallenom.math/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.framework": "2.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.math.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.math.dll": {}
+        }
+      },
+      "mallenom.neuronet/2.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/mallenom.neuronet.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.neuronet.dll": {}
+        }
+      },
+      "mallenom.video/4.8.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging": "3.7.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.dll": {}
+        }
+      },
+      "mallenom.video.dshow/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.dshow.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.dshow.dll": {}
+        }
+      },
+      "mallenom.video.ffmpeg/1.2.1": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.ffmpeg": "1.2.1",
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.ffmpeg.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.ffmpeg.dll": {}
+        }
+      },
+      "mallenom.video.ipcam/1.9.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging.compressed": "3.7.0",
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.ipcam.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.ipcam.dll": {}
+        }
+      },
+      "mallenom.video.ipcam.dshow/1.9.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.ipcam.dshow.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.ipcam.dshow.dll": {}
+        }
+      },
+      "NUnit/3.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/nunit.framework.dll": {}
+        }
+      },
+      "recar2.ui/0.2.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging": "3.7.0"
+        },
+        "compile": {
+          "lib/net45/recar2.ui.dll": {}
+        },
+        "runtime": {
+          "lib/net45/recar2.ui.dll": {}
+        }
+      },
+      "recar2.algorithms/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.platestencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.algorithms.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.algorithms.dll": {}
+        }
+      },
+      "recar2.algorithms.ui/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "mallenom.imaging": "3.7.0",
+          "mallenom.video": "4.8.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.composite": "1.0.0",
+          "recar2.convenient": "1.0.0",
+          "recar2.decisions": "1.0.0",
+          "recar2.motion": "1.0.0",
+          "recar2.platelocalization": "1.0.0",
+          "recar2.platestencil": "1.0.0",
+          "recar2.recogstencil": "1.0.0",
+          "recar2.ui": "0.2.0",
+          "recar2.vehicledetection": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.algorithms.ui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.algorithms.ui.dll": {}
+        }
+      },
+      "recar2.composite/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.convenient": "1.0.0",
+          "recar2.decisions": "1.0.0",
+          "recar2.motion": "1.0.0",
+          "recar2.platelocalization": "1.0.0",
+          "recar2.platestencil": "1.0.0",
+          "recar2.recogstencil": "1.0.0",
+          "recar2.vehicledetection": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.composite.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.composite.dll": {}
+        }
+      },
+      "recar2.convenient/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.convenient.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.convenient.dll": {}
+        }
+      },
+      "recar2.decisions/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.platestencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.decisions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.decisions.dll": {}
+        }
+      },
+      "recar2.models/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/recar2.models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.models.dll": {}
+        }
+      },
+      "recar2.models.loader/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.math": "1.5.0",
+          "mallenom.neuronet": "2.5.0",
+          "recar2.platestencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.models.loader.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.models.loader.dll": {}
+        }
+      },
+      "recar2.models.noenc/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/recar2.models.noenc.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.models.noenc.dll": {}
+        }
+      },
+      "recar2.motion/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.motion.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.motion.dll": {}
+        }
+      },
+      "recar2.platelocalization/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.platelocalization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.platelocalization.dll": {}
+        }
+      },
+      "recar2.platestencil/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/recar2.platestencil.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.platestencil.dll": {}
+        }
+      },
+      "recar2.recogstencil/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.models.loader": "1.0.0",
+          "recar2.platestencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.recogstencil.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.recogstencil.dll": {}
+        }
+      },
+      "recar2.tests.common/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "NUnit": "3.7.1",
+          "mallenom.imaging.compressed": "3.7.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.algorithms.ui": "1.0.0",
+          "recar2.composite": "1.0.0",
+          "recar2.convenient": "1.0.0",
+          "recar2.decisions": "1.0.0",
+          "recar2.models.loader": "1.0.0",
+          "recar2.models.noenc": "1.0.0",
+          "recar2.platestencil": "1.0.0",
+          "recar2.recogstencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.tests.common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.tests.common.dll": {}
+        }
+      },
+      "recar2.vehicledetection/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.recogstencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.vehicledetection.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.vehicledetection.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7/win-x64": {
+      "mallenom.ffmpeg/1.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/mallenom.ffmpeg.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.ffmpeg.dll": {}
+        }
+      },
+      "mallenom.framework/2.8.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/mallenom.framework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.framework.dll": {}
+        }
+      },
+      "mallenom.imaging/3.7.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.framework": "2.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.imaging.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.imaging.dll": {}
+        }
+      },
+      "mallenom.imaging.compressed/3.7.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging": "3.7.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.imaging.compressed.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.imaging.compressed.dll": {}
+        }
+      },
+      "mallenom.math/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.framework": "2.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.math.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.math.dll": {}
+        }
+      },
+      "mallenom.neuronet/2.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/mallenom.neuronet.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.neuronet.dll": {}
+        }
+      },
+      "mallenom.video/4.8.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging": "3.7.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.dll": {}
+        }
+      },
+      "mallenom.video.dshow/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.dshow.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.dshow.dll": {}
+        }
+      },
+      "mallenom.video.ffmpeg/1.2.1": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.ffmpeg": "1.2.1",
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.ffmpeg.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.ffmpeg.dll": {}
+        }
+      },
+      "mallenom.video.ipcam/1.9.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging.compressed": "3.7.0",
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.ipcam.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.ipcam.dll": {}
+        }
+      },
+      "mallenom.video.ipcam.dshow/1.9.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.ipcam.dshow.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.ipcam.dshow.dll": {}
+        }
+      },
+      "NUnit/3.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/nunit.framework.dll": {}
+        }
+      },
+      "recar2.ui/0.2.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging": "3.7.0"
+        },
+        "compile": {
+          "lib/net45/recar2.ui.dll": {}
+        },
+        "runtime": {
+          "lib/net45/recar2.ui.dll": {}
+        }
+      },
+      "recar2.algorithms/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.platestencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.algorithms.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.algorithms.dll": {}
+        }
+      },
+      "recar2.algorithms.ui/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "mallenom.imaging": "3.7.0",
+          "mallenom.video": "4.8.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.composite": "1.0.0",
+          "recar2.convenient": "1.0.0",
+          "recar2.decisions": "1.0.0",
+          "recar2.motion": "1.0.0",
+          "recar2.platelocalization": "1.0.0",
+          "recar2.platestencil": "1.0.0",
+          "recar2.recogstencil": "1.0.0",
+          "recar2.ui": "0.2.0",
+          "recar2.vehicledetection": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.algorithms.ui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.algorithms.ui.dll": {}
+        }
+      },
+      "recar2.composite/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.convenient": "1.0.0",
+          "recar2.decisions": "1.0.0",
+          "recar2.motion": "1.0.0",
+          "recar2.platelocalization": "1.0.0",
+          "recar2.platestencil": "1.0.0",
+          "recar2.recogstencil": "1.0.0",
+          "recar2.vehicledetection": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.composite.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.composite.dll": {}
+        }
+      },
+      "recar2.convenient/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.convenient.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.convenient.dll": {}
+        }
+      },
+      "recar2.decisions/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.platestencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.decisions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.decisions.dll": {}
+        }
+      },
+      "recar2.models/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/recar2.models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.models.dll": {}
+        }
+      },
+      "recar2.models.loader/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.math": "1.5.0",
+          "mallenom.neuronet": "2.5.0",
+          "recar2.platestencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.models.loader.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.models.loader.dll": {}
+        }
+      },
+      "recar2.models.noenc/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/recar2.models.noenc.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.models.noenc.dll": {}
+        }
+      },
+      "recar2.motion/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.motion.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.motion.dll": {}
+        }
+      },
+      "recar2.platelocalization/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.platelocalization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.platelocalization.dll": {}
+        }
+      },
+      "recar2.platestencil/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/recar2.platestencil.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.platestencil.dll": {}
+        }
+      },
+      "recar2.recogstencil/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.models.loader": "1.0.0",
+          "recar2.platestencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.recogstencil.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.recogstencil.dll": {}
+        }
+      },
+      "recar2.tests.common/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "NUnit": "3.7.1",
+          "mallenom.imaging.compressed": "3.7.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.algorithms.ui": "1.0.0",
+          "recar2.composite": "1.0.0",
+          "recar2.convenient": "1.0.0",
+          "recar2.decisions": "1.0.0",
+          "recar2.models.loader": "1.0.0",
+          "recar2.models.noenc": "1.0.0",
+          "recar2.platestencil": "1.0.0",
+          "recar2.recogstencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.tests.common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.tests.common.dll": {}
+        }
+      },
+      "recar2.vehicledetection/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.recogstencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.vehicledetection.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.vehicledetection.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7/win-x86": {
+      "mallenom.ffmpeg/1.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/mallenom.ffmpeg.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.ffmpeg.dll": {}
+        }
+      },
+      "mallenom.framework/2.8.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/mallenom.framework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.framework.dll": {}
+        }
+      },
+      "mallenom.imaging/3.7.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.framework": "2.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.imaging.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.imaging.dll": {}
+        }
+      },
+      "mallenom.imaging.compressed/3.7.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging": "3.7.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.imaging.compressed.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.imaging.compressed.dll": {}
+        }
+      },
+      "mallenom.math/1.5.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.framework": "2.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.math.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.math.dll": {}
+        }
+      },
+      "mallenom.neuronet/2.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/mallenom.neuronet.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.neuronet.dll": {}
+        }
+      },
+      "mallenom.video/4.8.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging": "3.7.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.dll": {}
+        }
+      },
+      "mallenom.video.dshow/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.dshow.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.dshow.dll": {}
+        }
+      },
+      "mallenom.video.ffmpeg/1.2.1": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.ffmpeg": "1.2.1",
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.ffmpeg.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.ffmpeg.dll": {}
+        }
+      },
+      "mallenom.video.ipcam/1.9.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging.compressed": "3.7.0",
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.ipcam.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.ipcam.dll": {}
+        }
+      },
+      "mallenom.video.ipcam.dshow/1.9.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.ipcam.dshow.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.ipcam.dshow.dll": {}
+        }
+      },
+      "NUnit/3.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/nunit.framework.dll": {}
+        }
+      },
+      "recar2.ui/0.2.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging": "3.7.0"
+        },
+        "compile": {
+          "lib/net45/recar2.ui.dll": {}
+        },
+        "runtime": {
+          "lib/net45/recar2.ui.dll": {}
+        }
+      },
+      "recar2.algorithms/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.platestencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.algorithms.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.algorithms.dll": {}
+        }
+      },
+      "recar2.algorithms.ui/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "mallenom.imaging": "3.7.0",
+          "mallenom.video": "4.8.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.composite": "1.0.0",
+          "recar2.convenient": "1.0.0",
+          "recar2.decisions": "1.0.0",
+          "recar2.motion": "1.0.0",
+          "recar2.platelocalization": "1.0.0",
+          "recar2.platestencil": "1.0.0",
+          "recar2.recogstencil": "1.0.0",
+          "recar2.ui": "0.2.0",
+          "recar2.vehicledetection": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.algorithms.ui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.algorithms.ui.dll": {}
+        }
+      },
+      "recar2.composite/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.convenient": "1.0.0",
+          "recar2.decisions": "1.0.0",
+          "recar2.motion": "1.0.0",
+          "recar2.platelocalization": "1.0.0",
+          "recar2.platestencil": "1.0.0",
+          "recar2.recogstencil": "1.0.0",
+          "recar2.vehicledetection": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.composite.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.composite.dll": {}
+        }
+      },
+      "recar2.convenient/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.convenient.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.convenient.dll": {}
+        }
+      },
+      "recar2.decisions/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.platestencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.decisions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.decisions.dll": {}
+        }
+      },
+      "recar2.models/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/recar2.models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.models.dll": {}
+        }
+      },
+      "recar2.models.loader/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.math": "1.5.0",
+          "mallenom.neuronet": "2.5.0",
+          "recar2.platestencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.models.loader.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.models.loader.dll": {}
+        }
+      },
+      "recar2.models.noenc/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/recar2.models.noenc.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.models.noenc.dll": {}
+        }
+      },
+      "recar2.motion/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.motion.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.motion.dll": {}
+        }
+      },
+      "recar2.platelocalization/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.platelocalization.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.platelocalization.dll": {}
+        }
+      },
+      "recar2.platestencil/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/recar2.platestencil.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.platestencil.dll": {}
+        }
+      },
+      "recar2.recogstencil/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.models.loader": "1.0.0",
+          "recar2.platestencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.recogstencil.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.recogstencil.dll": {}
+        }
+      },
+      "recar2.tests.common/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "NUnit": "3.7.1",
+          "mallenom.imaging.compressed": "3.7.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.algorithms.ui": "1.0.0",
+          "recar2.composite": "1.0.0",
+          "recar2.convenient": "1.0.0",
+          "recar2.decisions": "1.0.0",
+          "recar2.models.loader": "1.0.0",
+          "recar2.models.noenc": "1.0.0",
+          "recar2.platestencil": "1.0.0",
+          "recar2.recogstencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.tests.common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.tests.common.dll": {}
+        }
+      },
+      "recar2.vehicledetection/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "mallenom.framework": "2.8.0",
+          "recar2.algorithms": "1.0.0",
+          "recar2.recogstencil": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/recar2.vehicledetection.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/recar2.vehicledetection.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "mallenom.ffmpeg/1.2.1": {
+      "sha512": "V1O4X/pVOHs3hv0Pyga6f2NOtjyLRbTcIHJoFRqRrucuwy6OWSvdlHrF/A3GTnXltfE2Q+JaEE1WPyiyiiBACA==",
+      "type": "package",
+      "path": "mallenom.ffmpeg/1.2.1",
+      "files": [
+        "lib/net45/mallenom.ffmpeg.dll",
+        "lib/net45/mallenom.ffmpeg.dll.metagen",
+        "lib/net45/mallenom.ffmpeg.pdb",
+        "lib/net45/mallenom.ffmpeg.xml",
+        "lib_x64/net45/mallenom.ffmpeg.dll",
+        "lib_x64/net45/mallenom.ffmpeg.dll.metagen",
+        "lib_x64/net45/mallenom.ffmpeg.pdb",
+        "lib_x64/net45/mallenom.ffmpeg.xml",
+        "mallenom.ffmpeg.1.2.1.nupkg.sha512",
+        "mallenom.ffmpeg.nuspec"
+      ]
+    },
+    "mallenom.framework/2.8.0": {
+      "sha512": "UqaoM0NvO0iurBy3cP6GXJ7/LsJR6ROvCUlKUvSD/K1DWjwzAII6n5nlTma4LJKPdcRvTR4AqmxdnB29SYqHSQ==",
+      "type": "package",
+      "path": "mallenom.framework/2.8.0",
+      "files": [
+        "lib/net45/mallenom.framework.dll",
+        "lib/net45/mallenom.framework.pdb",
+        "lib/net45/mallenom.framework.xml",
+        "mallenom.framework.2.8.0.nupkg.sha512",
+        "mallenom.framework.nuspec"
+      ]
+    },
+    "mallenom.imaging/3.7.0": {
+      "sha512": "ej6qfHJvy1OtghiJ5PGDn6X7o+O0+aQzGrXnqCH1ADfB+tNX4bFTOeDSLP8pMhJLdCuffWurN1/l0kuVxI2lww==",
+      "type": "package",
+      "path": "mallenom.imaging/3.7.0",
+      "files": [
+        "Content/Visualizers/mallenom.imaging.visualizer.dll",
+        "lib/net45/mallenom.imaging.dll",
+        "lib/net45/mallenom.imaging.pdb",
+        "lib/net45/mallenom.imaging.xml",
+        "mallenom.imaging.3.7.0.nupkg.sha512",
+        "mallenom.imaging.nuspec",
+        "readme.txt"
+      ]
+    },
+    "mallenom.imaging.compressed/3.7.0": {
+      "sha512": "b7CFljmmzSjsJezBSjq20vtBqSQwzQ9JR8kr4ZBEH/zqj2JLQsEq02Q+/ra9VswnBSQJIxLBZ0HPLUuR9WLnrA==",
+      "type": "package",
+      "path": "mallenom.imaging.compressed/3.7.0",
+      "files": [
+        "lib/net45/mallenom.imaging.compressed.dll",
+        "lib/net45/mallenom.imaging.compressed.pdb",
+        "lib/net45/mallenom.imaging.compressed.xml",
+        "lib_x64/net45/mallenom.imaging.compressed.dll",
+        "lib_x64/net45/mallenom.imaging.compressed.pdb",
+        "lib_x64/net45/mallenom.imaging.compressed.xml",
+        "mallenom.imaging.compressed.3.7.0.nupkg.sha512",
+        "mallenom.imaging.compressed.nuspec"
+      ]
+    },
+    "mallenom.math/1.5.0": {
+      "sha512": "KkZz9iRYcT6lRX8soq0w6QvpBd8Wt7S1Myfl2QQoix8RytOcpsnaCYYIszVYYGyUfUNTliwDsT3fliMGOxDfuA==",
+      "type": "package",
+      "path": "mallenom.math/1.5.0",
+      "files": [
+        "lib/net45/mallenom.math.dll",
+        "lib/net45/mallenom.math.pdb",
+        "lib/net45/mallenom.math.xml",
+        "mallenom.math.1.5.0.nupkg.sha512",
+        "mallenom.math.nuspec"
+      ]
+    },
+    "mallenom.neuronet/2.5.0": {
+      "sha512": "OGsqHzzucGszHF0tdf6zk3Dc13LshVWZpXd4W882uV+Jkc9RTMjdMc79zj1Q/Rq8guFibGtqysglzraXVg/bIw==",
+      "type": "package",
+      "path": "mallenom.neuronet/2.5.0",
+      "files": [
+        "lib/net45/mallenom.neuronet.dll",
+        "lib/net45/mallenom.neuronet.dll.metagen",
+        "lib/net45/mallenom.neuronet.xml",
+        "lib_x64/net45/mallenom.neuronet.dll",
+        "lib_x64/net45/mallenom.neuronet.dll.metagen",
+        "lib_x64/net45/mallenom.neuronet.xml",
+        "mallenom.neuronet.2.5.0.nupkg.sha512",
+        "mallenom.neuronet.nuspec",
+        "readme.txt"
+      ]
+    },
+    "mallenom.video/4.8.0": {
+      "sha512": "7oSTkV8IDZGLge4Us7SUOzzz0G5TjHCW7Phr8ATqejsRVfkul94pjeGCO1UWgxc0WYox7op0VuIjg5OeTeMI9g==",
+      "type": "package",
+      "path": "mallenom.video/4.8.0",
+      "files": [
+        "lib/net45/mallenom.video.dll",
+        "lib/net45/mallenom.video.pdb",
+        "lib/net45/mallenom.video.xml",
+        "mallenom.video.4.8.0.nupkg.sha512",
+        "mallenom.video.nuspec",
+        "readme.txt"
+      ]
+    },
+    "mallenom.video.dshow/3.2.0": {
+      "sha512": "Ntr3rOLDmcnNLMvrMivli4o49QZ1FzoqFR3KIlDEwrD1963+kTkS+HGbQRbOAC5+80fAodf6Y4ZJ2YcEF2Kseg==",
+      "type": "package",
+      "path": "mallenom.video.dshow/3.2.0",
+      "files": [
+        "lib/net45/mallenom.video.dshow.dll",
+        "lib/net45/mallenom.video.dshow.dll.refs.txt",
+        "lib/net45/mallenom.video.dshow.pdb",
+        "lib/net45/mallenom.video.dshow.xml",
+        "mallenom.video.dshow.3.2.0.nupkg.sha512",
+        "mallenom.video.dshow.nuspec"
+      ]
+    },
+    "mallenom.video.ffmpeg/1.2.1": {
+      "sha512": "tkNFH4CQYfK1R+3ucjwPXR8cptccf1AG0ffhEQhzpO/nh/ptbuTrtihrBkDBmgBGE2Pd65BOtnPuiLtbpEgB2g==",
+      "type": "package",
+      "path": "mallenom.video.ffmpeg/1.2.1",
+      "files": [
+        "lib/net45/mallenom.video.ffmpeg.dll",
+        "lib/net45/mallenom.video.ffmpeg.pdb",
+        "lib/net45/mallenom.video.ffmpeg.xml",
+        "mallenom.video.ffmpeg.1.2.1.nupkg.sha512",
+        "mallenom.video.ffmpeg.nuspec"
+      ]
+    },
+    "mallenom.video.ipcam/1.9.0": {
+      "sha512": "ZQw06kMIyf0Tb2IQ8Rg8dP/BAtIF5rDDkQsF0CMtHPpJhh8NLs9bkUMV6io0Zlh5x9/9MDWcsfgqf/mlhDGc3w==",
+      "type": "package",
+      "path": "mallenom.video.ipcam/1.9.0",
+      "files": [
+        "lib/net45/mallenom.video.ipcam.dll",
+        "lib/net45/mallenom.video.ipcam.pdb",
+        "lib/net45/mallenom.video.ipcam.xml",
+        "mallenom.video.ipcam.1.9.0.nupkg.sha512",
+        "mallenom.video.ipcam.nuspec",
+        "readme.txt"
+      ]
+    },
+    "mallenom.video.ipcam.dshow/1.9.0": {
+      "sha512": "dPdFckm5CVGqyuteeLIwxWMQ+n1Fp8SFjpiWIPU/yrreZkLty2jrBVGCX+8HSf7gQIy/lvBkJnMjBqtNZuL3xg==",
+      "type": "package",
+      "path": "mallenom.video.ipcam.dshow/1.9.0",
+      "files": [
+        "lib/net45/mallenom.video.ipcam.dshow.dll",
+        "lib/net45/mallenom.video.ipcam.dshow.pdb",
+        "lib/net45/mallenom.video.ipcam.dshow.xml",
+        "mallenom.video.ipcam.dshow.1.9.0.nupkg.sha512",
+        "mallenom.video.ipcam.dshow.nuspec",
+        "readme.txt"
+      ]
+    },
+    "NUnit/3.7.1": {
+      "sha512": "vUTICvR3uqw6OTOcwsfz22KjVk8xFcNdz22XnGPL3itQU7+HSV+8xySjGmVkMWZ4IPbaV/+T33C775EEtiEYIA==",
+      "type": "package",
+      "path": "nunit/3.7.1",
+      "files": [
+        "CHANGES.md",
+        "LICENSE.txt",
+        "NOTICES.txt",
+        "lib/net20/NUnit.System.Linq.dll",
+        "lib/net20/nunit.framework.dll",
+        "lib/net20/nunit.framework.xml",
+        "lib/net35/nunit.framework.dll",
+        "lib/net35/nunit.framework.xml",
+        "lib/net40/nunit.framework.dll",
+        "lib/net40/nunit.framework.xml",
+        "lib/net45/nunit.framework.dll",
+        "lib/net45/nunit.framework.xml",
+        "lib/netstandard1.3/nunit.framework.dll",
+        "lib/netstandard1.3/nunit.framework.xml",
+        "lib/netstandard1.6/nunit.framework.dll",
+        "lib/netstandard1.6/nunit.framework.xml",
+        "nunit.3.7.1.nupkg.sha512",
+        "nunit.nuspec"
+      ]
+    },
+    "recar2.ui/0.2.0": {
+      "sha512": "XbVABdwHinPI6usAUjDyAcIUhyJQsWGa+BVHKVp9e+PtC1H1A0eNYZnDDLqzwazkiCTB8/RQI9IFw5mSEfBJRw==",
+      "type": "package",
+      "path": "recar2.ui/0.2.0",
+      "files": [
+        "lib/net45/recar2.ui.dll",
+        "lib/net45/recar2.ui.pdb",
+        "lib/net45/recar2.ui.xml",
+        "recar2.ui.0.2.0.nupkg.sha512",
+        "recar2.ui.nuspec"
+      ]
+    },
+    "recar2.algorithms/1.0.0": {
+      "type": "project",
+      "path": "../../recar2.algorithms.prj/recar2.algorithms.csproj",
+      "msbuildProject": "../../recar2.algorithms.prj/recar2.algorithms.csproj"
+    },
+    "recar2.algorithms.ui/1.0.0": {
+      "type": "project",
+      "path": "../../recar2.algorithms.ui.prj/recar2.algorithms.ui.csproj",
+      "msbuildProject": "../../recar2.algorithms.ui.prj/recar2.algorithms.ui.csproj"
+    },
+    "recar2.composite/1.0.0": {
+      "type": "project",
+      "path": "../../recar2.composite.prj/recar2.composite.csproj",
+      "msbuildProject": "../../recar2.composite.prj/recar2.composite.csproj"
+    },
+    "recar2.convenient/1.0.0": {
+      "type": "project",
+      "path": "../../recar2.convenient.prj/recar2.convenient.csproj",
+      "msbuildProject": "../../recar2.convenient.prj/recar2.convenient.csproj"
+    },
+    "recar2.decisions/1.0.0": {
+      "type": "project",
+      "path": "../../recar2.decisions.prj/recar2.decisions.csproj",
+      "msbuildProject": "../../recar2.decisions.prj/recar2.decisions.csproj"
+    },
+    "recar2.models/1.0.0": {
+      "type": "project",
+      "path": "../../models/recar2.models.prj/recar2.models.csproj",
+      "msbuildProject": "../../models/recar2.models.prj/recar2.models.csproj"
+    },
+    "recar2.models.loader/1.0.0": {
+      "type": "project",
+      "path": "../../recar2.models.loader.prj/recar2.models.loader.csproj",
+      "msbuildProject": "../../recar2.models.loader.prj/recar2.models.loader.csproj"
+    },
+    "recar2.models.noenc/1.0.0": {
+      "type": "project",
+      "path": "../../models/recar2.models.noenc.prj/recar2.models.noenc.csproj",
+      "msbuildProject": "../../models/recar2.models.noenc.prj/recar2.models.noenc.csproj"
+    },
+    "recar2.motion/1.0.0": {
+      "type": "project",
+      "path": "../../recar2.motion.prj/recar2.motion.csproj",
+      "msbuildProject": "../../recar2.motion.prj/recar2.motion.csproj"
+    },
+    "recar2.platelocalization/1.0.0": {
+      "type": "project",
+      "path": "../../recar2.platelocalization.prj/recar2.platelocalization.csproj",
+      "msbuildProject": "../../recar2.platelocalization.prj/recar2.platelocalization.csproj"
+    },
+    "recar2.platestencil/1.0.0": {
+      "type": "project",
+      "path": "../../recar2.platestencil.prj/recar2.platestencil.csproj",
+      "msbuildProject": "../../recar2.platestencil.prj/recar2.platestencil.csproj"
+    },
+    "recar2.recogstencil/1.0.0": {
+      "type": "project",
+      "path": "../../recar2.recogstencil.prj/recar2.recogstencil.csproj",
+      "msbuildProject": "../../recar2.recogstencil.prj/recar2.recogstencil.csproj"
+    },
+    "recar2.tests.common/1.0.0": {
+      "type": "project",
+      "path": "../recar2.tests.common.prj/recar2.tests.common.csproj",
+      "msbuildProject": "../recar2.tests.common.prj/recar2.tests.common.csproj"
+    },
+    "recar2.vehicledetection/1.0.0": {
+      "type": "project",
+      "path": "../../recar2.vehicledetection.prj/recar2.vehicledetection.csproj",
+      "msbuildProject": "../../recar2.vehicledetection.prj/recar2.vehicledetection.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.7": [
+      "mallenom.ffmpeg >= 1.2.1",
+      "mallenom.imaging.compressed >= 3.7.0",
+      "mallenom.neuronet >= 2.5.0",
+      "mallenom.video >= 4.8.0",
+      "mallenom.video.dshow >= 3.2.0",
+      "mallenom.video.ffmpeg >= 1.2.1",
+      "mallenom.video.ipcam >= 1.9.0",
+      "mallenom.video.ipcam.dshow >= 1.9.0",
+      "recar2.algorithms >= 1.0.0",
+      "recar2.algorithms.ui >= 1.0.0",
+      "recar2.composite >= 1.0.0",
+      "recar2.convenient >= 1.0.0",
+      "recar2.decisions >= 1.0.0",
+      "recar2.models >= 1.0.0",
+      "recar2.models.loader >= 1.0.0",
+      "recar2.models.noenc >= 1.0.0",
+      "recar2.motion >= 1.0.0",
+      "recar2.platelocalization >= 1.0.0",
+      "recar2.platestencil >= 1.0.0",
+      "recar2.recogstencil >= 1.0.0",
+      "recar2.tests.common >= 1.0.0",
+      "recar2.vehicledetection >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\kiple\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Projects\\automarshal\\algorithms\\src\\tests\\recar2.recogstencil.uitests.prj\\recar2.recogstencil.tests.ui.csproj",
+      "projectName": "recar2.recogstencil.tests.ui",
+      "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\tests\\recar2.recogstencil.uitests.prj\\recar2.recogstencil.tests.ui.csproj",
+      "packagesPath": "C:\\Users\\kiple\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\automarshal\\algorithms\\src\\tests\\recar2.recogstencil.uitests.prj\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\kiple\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net47"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://dev.mallenom.ru:3645/nuget/mallenom/": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net47": {
+          "projectReferences": {
+            "D:\\Projects\\automarshal\\algorithms\\src\\models\\recar2.models.noenc.prj\\recar2.models.noenc.csproj": {
+              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\models\\recar2.models.noenc.prj\\recar2.models.noenc.csproj"
+            },
+            "D:\\Projects\\automarshal\\algorithms\\src\\models\\recar2.models.prj\\recar2.models.csproj": {
+              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\models\\recar2.models.prj\\recar2.models.csproj"
+            },
+            "D:\\Projects\\automarshal\\algorithms\\src\\recar2.algorithms.ui.prj\\recar2.algorithms.ui.csproj": {
+              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\recar2.algorithms.ui.prj\\recar2.algorithms.ui.csproj"
+            },
+            "D:\\Projects\\automarshal\\algorithms\\src\\recar2.convenient.prj\\recar2.convenient.csproj": {
+              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\recar2.convenient.prj\\recar2.convenient.csproj"
+            },
+            "D:\\Projects\\automarshal\\algorithms\\src\\recar2.platelocalization.prj\\recar2.platelocalization.csproj": {
+              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\recar2.platelocalization.prj\\recar2.platelocalization.csproj"
+            },
+            "D:\\Projects\\automarshal\\algorithms\\src\\recar2.composite.prj\\recar2.composite.csproj": {
+              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\recar2.composite.prj\\recar2.composite.csproj"
+            },
+            "D:\\Projects\\automarshal\\algorithms\\src\\recar2.algorithms.prj\\recar2.algorithms.csproj": {
+              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\recar2.algorithms.prj\\recar2.algorithms.csproj"
+            },
+            "D:\\Projects\\automarshal\\algorithms\\src\\recar2.decisions.prj\\recar2.decisions.csproj": {
+              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\recar2.decisions.prj\\recar2.decisions.csproj"
+            },
+            "D:\\Projects\\automarshal\\algorithms\\src\\recar2.models.loader.prj\\recar2.models.loader.csproj": {
+              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\recar2.models.loader.prj\\recar2.models.loader.csproj"
+            },
+            "D:\\Projects\\automarshal\\algorithms\\src\\recar2.motion.prj\\recar2.motion.csproj": {
+              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\recar2.motion.prj\\recar2.motion.csproj"
+            },
+            "D:\\Projects\\automarshal\\algorithms\\src\\recar2.platestencil.prj\\recar2.platestencil.csproj": {
+              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\recar2.platestencil.prj\\recar2.platestencil.csproj"
+            },
+            "D:\\Projects\\automarshal\\algorithms\\src\\recar2.recogstencil.prj\\recar2.recogstencil.csproj": {
+              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\recar2.recogstencil.prj\\recar2.recogstencil.csproj"
+            },
+            "D:\\Projects\\automarshal\\algorithms\\src\\recar2.vehicledetection.prj\\recar2.vehicledetection.csproj": {
+              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\recar2.vehicledetection.prj\\recar2.vehicledetection.csproj"
+            },
+            "D:\\Projects\\automarshal\\algorithms\\src\\tests\\recar2.tests.common.prj\\recar2.tests.common.csproj": {
+              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\tests\\recar2.tests.common.prj\\recar2.tests.common.csproj"
+            }
+          }
+        }
+      }
+    },
+    "dependencies": {
+      "mallenom.ffmpeg": {
+        "target": "Package",
+        "version": "1.2.1"
+      },
+      "mallenom.imaging.compressed": {
+        "target": "Package",
+        "version": "3.7.0"
+      },
+      "mallenom.neuronet": {
+        "target": "Package",
+        "version": "2.5.0"
+      },
+      "mallenom.video": {
+        "target": "Package",
+        "version": "4.8.0"
+      },
+      "mallenom.video.dshow": {
+        "target": "Package",
+        "version": "3.2.0"
+      },
+      "mallenom.video.ffmpeg": {
+        "target": "Package",
+        "version": "1.2.1"
+      },
+      "mallenom.video.ipcam": {
+        "target": "Package",
+        "version": "1.9.0"
+      },
+      "mallenom.video.ipcam.dshow": {
+        "target": "Package",
+        "version": "1.9.0"
+      }
+    },
+    "frameworks": {
+      "net47": {
+        "dependencies": {
+          "mallenom.ffmpeg": {
+            "target": "Package",
+            "version": "1.2.1"
+          },
+          "mallenom.imaging.compressed": {
+            "target": "Package",
+            "version": "3.7.0"
+          },
+          "mallenom.neuronet": {
+            "target": "Package",
+            "version": "2.5.0"
+          },
+          "mallenom.video": {
+            "target": "Package",
+            "version": "4.8.0"
+          },
+          "mallenom.video.dshow": {
+            "target": "Package",
+            "version": "3.2.0"
+          },
+          "mallenom.video.ffmpeg": {
+            "target": "Package",
+            "version": "1.2.1"
+          },
+          "mallenom.video.ipcam": {
+            "target": "Package",
+            "version": "1.9.0"
+          },
+          "mallenom.video.ipcam.dshow": {
+            "target": "Package",
+            "version": "1.9.0"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}
