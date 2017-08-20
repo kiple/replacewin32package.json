@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "replacewin32package.json", "replacewin32package.json.prj\replacewin32package.json.csproj", "{99B0BEF0-D00B-4CAD-84B9-F31C44DFE570}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "replacewin64nugetpaths", "replacewin64nugetpaths.prj\replacewin64nugetpaths.csproj", "{99B0BEF0-D00B-4CAD-84B9-F31C44DFE570}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{99B0BEF0-D00B-4CAD-84B9-F31C44DFE570}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>replacewin32package.json</RootNamespace>
-    <AssemblyName>replacewin32package.json</AssemblyName>
+    <RootNamespace>ReplaceWin64NugetPaths</RootNamespace>
+    <AssemblyName>replacewin64nugetpaths</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
