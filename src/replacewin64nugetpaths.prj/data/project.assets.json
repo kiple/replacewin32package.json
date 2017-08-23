@@ -2,13 +2,81 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7": {
-      "mallenom.ffmpeg/1.2.1": {
+      "arscis.common/1.13.0": {
         "type": "package",
+        "dependencies": {
+          "mallenom.framework": "2.8.0"
+        },
         "compile": {
-          "lib/net45/mallenom.ffmpeg.dll": {}
+          "lib/net47/arscis.common.dll": {}
         },
         "runtime": {
-          "lib/net45/mallenom.ffmpeg.dll": {}
+          "lib/net47/arscis.common.dll": {}
+        }
+      },
+      "arscis.launch/1.13.0": {
+        "type": "package",
+        "dependencies": {
+          "arscis.common": "1.13.0",
+          "mallenom.apputility": "1.8.0"
+        },
+        "compile": {
+          "lib/net47/arscis.launch.dll": {}
+        },
+        "runtime": {
+          "lib/net47/arscis.launch.dll": {}
+        }
+      },
+      "mallenom.apputility/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.framework": "2.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.apputility.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.apputility.dll": {}
+        }
+      },
+      "mallenom.dvr/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.dvr.storage": "1.4.0",
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net47/mallenom.dvr.dll": {},
+          "lib/net47/mallenom.dvr.storage.dll": {}
+        },
+        "runtime": {
+          "lib/net47/mallenom.dvr.dll": {},
+          "lib/net47/mallenom.dvr.storage.dll": {}
+        }
+      },
+      "mallenom.dvr.avistorage/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.dvr.storage": "1.4.0",
+          "mallenom.video.avi.compressed": "4.8.0"
+        },
+        "compile": {
+          "lib/net47/mallenom.dvr.avistorage.dll": {}
+        },
+        "runtime": {
+          "lib/net47/mallenom.dvr.avistorage.dll": {}
+        }
+      },
+      "mallenom.dvr.storage/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging": "3.7.0"
+        },
+        "compile": {
+          "lib/net47/mallenom.dvr.storage.dll": {}
+        },
+        "runtime": {
+          "lib/net47/mallenom.dvr.storage.dll": {}
         }
       },
       "mallenom.framework/2.8.0": {
@@ -44,25 +112,28 @@
           "lib/net45/mallenom.imaging.compressed.dll": {}
         }
       },
-      "mallenom.math/1.5.0": {
+      "mallenom.ipl/1.7.0": {
         "type": "package",
         "dependencies": {
-          "mallenom.framework": "2.8.0"
+          "mallenom.video": "4.8.0"
         },
         "compile": {
-          "lib/net45/mallenom.math.dll": {}
+          "lib/net45/mallenom.ipl.dll": {}
         },
         "runtime": {
-          "lib/net45/mallenom.math.dll": {}
+          "lib/net45/mallenom.ipl.dll": {}
         }
       },
-      "mallenom.neuronet/2.5.0": {
+      "mallenom.modbus/1.1.0": {
         "type": "package",
+        "dependencies": {
+          "mallenom.framework": "(, )"
+        },
         "compile": {
-          "lib/net45/mallenom.neuronet.dll": {}
+          "lib/mallenom.modbus.dll": {}
         },
         "runtime": {
-          "lib/net45/mallenom.neuronet.dll": {}
+          "lib/mallenom.modbus.dll": {}
         }
       },
       "mallenom.video/4.8.0": {
@@ -77,6 +148,31 @@
           "lib/net45/mallenom.video.dll": {}
         }
       },
+      "mallenom.video.avi/4.8.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.avi.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.avi.dll": {}
+        }
+      },
+      "mallenom.video.avi.compressed/4.8.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging.compressed": "3.7.0",
+          "mallenom.video.avi": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.avi.compressed.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.avi.compressed.dll": {}
+        }
+      },
       "mallenom.video.dshow/3.2.0": {
         "type": "package",
         "dependencies": {
@@ -87,19 +183,6 @@
         },
         "runtime": {
           "lib/net45/mallenom.video.dshow.dll": {}
-        }
-      },
-      "mallenom.video.ffmpeg/1.2.1": {
-        "type": "package",
-        "dependencies": {
-          "mallenom.ffmpeg": "1.2.1",
-          "mallenom.video": "4.8.0"
-        },
-        "compile": {
-          "lib/net45/mallenom.video.ffmpeg.dll": {}
-        },
-        "runtime": {
-          "lib/net45/mallenom.video.ffmpeg.dll": {}
         }
       },
       "mallenom.video.ipcam/1.9.0": {
@@ -115,6 +198,23 @@
           "lib/net45/mallenom.video.ipcam.dll": {}
         }
       },
+      "mallenom.video.ipcam.bosch/1.9.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging.compressed": "3.7.0",
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/Bosch.VideoSDK.GCALib.dll": {},
+          "lib/net45/Bosch.VideoSDK.StreamItemsLib.dll": {},
+          "lib/net45/mallenom.video.ipcam.bosch.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Bosch.VideoSDK.GCALib.dll": {},
+          "lib/net45/Bosch.VideoSDK.StreamItemsLib.dll": {},
+          "lib/net45/mallenom.video.ipcam.bosch.dll": {}
+        }
+      },
       "mallenom.video.ipcam.dshow/1.9.0": {
         "type": "package",
         "dependencies": {
@@ -127,249 +227,311 @@
           "lib/net45/mallenom.video.ipcam.dshow.dll": {}
         }
       },
-      "NUnit/3.7.1": {
+      "mallenom.video.ipcam.linia/1.9.0": {
         "type": "package",
+        "dependencies": {
+          "mallenom.video.ipcam": "1.9.0"
+        },
         "compile": {
-          "lib/net45/nunit.framework.dll": {}
+          "lib/net45/mallenom.video.ipcam.linia.dll": {}
         },
         "runtime": {
-          "lib/net45/nunit.framework.dll": {}
+          "lib/net45/mallenom.video.ipcam.linia.dll": {}
         }
       },
-      "recar2.ui/0.2.0": {
+      "mallenom.video.pci/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.pci.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.pci.dll": {}
+        }
+      },
+      "mallenom.video.pylon/0.6.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/Basler.Pylon.dll": {},
+          "lib/net45/mallenom.video.pylon.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Basler.Pylon.dll": {},
+          "lib/net45/mallenom.video.pylon.dll": {}
+        }
+      },
+      "mallenom.video.vlc/0.2.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0",
+          "mallenom.vlc": "0.2.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.vlc.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.vlc.dll": {}
+        }
+      },
+      "mallenom.videoserver.client/0.9.1": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging": "(, )"
+        },
+        "compile": {
+          "lib/net45/mallenom.videoserver.client.dll": {},
+          "lib/net45/mallenom.videoserver.contracts.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.videoserver.client.dll": {},
+          "lib/net45/mallenom.videoserver.contracts.dll": {}
+        }
+      },
+      "mallenom.vlc/0.2.0": {
         "type": "package",
         "dependencies": {
           "mallenom.imaging": "3.7.0"
         },
         "compile": {
-          "lib/net45/recar2.ui.dll": {}
+          "lib/net45/mallenom.vlc.dll": {}
         },
         "runtime": {
-          "lib/net45/recar2.ui.dll": {}
+          "lib/net45/mallenom.vlc.dll": {}
         }
       },
-      "recar2.algorithms/1.0.0": {
+      "arscis.controls/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
+        "framework": ".NETFramework,Version=v4.7",
         "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.platestencil": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.algorithms.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.algorithms.dll": {}
-        }
-      },
-      "recar2.algorithms.ui/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
+          "arscis.common": "1.13.0",
           "mallenom.imaging": "3.7.0",
-          "mallenom.video": "4.8.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.composite": "1.0.0",
-          "recar2.convenient": "1.0.0",
-          "recar2.decisions": "1.0.0",
-          "recar2.motion": "1.0.0",
-          "recar2.platelocalization": "1.0.0",
-          "recar2.platestencil": "1.0.0",
-          "recar2.recogstencil": "1.0.0",
-          "recar2.ui": "0.2.0",
-          "recar2.vehicledetection": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.algorithms.ui.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.algorithms.ui.dll": {}
-        }
-      },
-      "recar2.composite/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.convenient": "1.0.0",
-          "recar2.decisions": "1.0.0",
-          "recar2.motion": "1.0.0",
-          "recar2.platelocalization": "1.0.0",
-          "recar2.platestencil": "1.0.0",
-          "recar2.recogstencil": "1.0.0",
-          "recar2.vehicledetection": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.composite.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.composite.dll": {}
-        }
-      },
-      "recar2.convenient/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.convenient.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.convenient.dll": {}
-        }
-      },
-      "recar2.decisions/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.platestencil": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.decisions.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.decisions.dll": {}
-        }
-      },
-      "recar2.models/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/recar2.models.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.models.dll": {}
-        }
-      },
-      "recar2.models.loader/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.math": "1.5.0",
-          "mallenom.neuronet": "2.5.0",
-          "recar2.platestencil": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.models.loader.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.models.loader.dll": {}
-        }
-      },
-      "recar2.models.noenc/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/recar2.models.noenc.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.models.noenc.dll": {}
-        }
-      },
-      "recar2.motion/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.motion.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.motion.dll": {}
-        }
-      },
-      "recar2.platelocalization/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.platelocalization.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.platelocalization.dll": {}
-        }
-      },
-      "recar2.platestencil/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/recar2.platestencil.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.platestencil.dll": {}
-        }
-      },
-      "recar2.recogstencil/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.models.loader": "1.0.0",
-          "recar2.platestencil": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.recogstencil.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.recogstencil.dll": {}
-        }
-      },
-      "recar2.tests.common/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "NUnit": "3.7.1",
           "mallenom.imaging.compressed": "3.7.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.algorithms.ui": "1.0.0",
-          "recar2.composite": "1.0.0",
-          "recar2.convenient": "1.0.0",
-          "recar2.decisions": "1.0.0",
-          "recar2.models.loader": "1.0.0",
-          "recar2.models.noenc": "1.0.0",
-          "recar2.platestencil": "1.0.0",
-          "recar2.recogstencil": "1.0.0"
+          "mallenom.videoserver.client": "0.9.1"
         },
         "compile": {
-          "bin/placeholder/recar2.tests.common.dll": {}
+          "bin/placeholder/arscis.controls.dll": {}
         },
         "runtime": {
-          "bin/placeholder/recar2.tests.common.dll": {}
+          "bin/placeholder/arscis.controls.dll": {}
         }
       },
-      "recar2.vehicledetection/1.0.0": {
+      "arscis.fox.alg.common/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
+        "framework": ".NETFramework,Version=v4.7",
         "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.recogstencil": "1.0.0"
+          "arscis.fox.common": "1.0.0",
+          "arscis.fox.objects": "1.0.0",
+          "arscis.fox.sensors": "1.0.0",
+          "mallenom.imaging": "3.7.0",
+          "mallenom.video": "4.8.0"
         },
         "compile": {
-          "bin/placeholder/recar2.vehicledetection.dll": {}
+          "bin/placeholder/arscis.fox.alg.common.dll": {}
         },
         "runtime": {
-          "bin/placeholder/recar2.vehicledetection.dll": {}
+          "bin/placeholder/arscis.fox.alg.common.dll": {}
+        }
+      },
+      "arscis.fox.common/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.common": "1.13.0",
+          "mallenom.framework": "2.8.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.fox.common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.fox.common.dll": {}
+        }
+      },
+      "arscis.fox.objects/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.common": "1.13.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.fox.objects.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.fox.objects.dll": {}
+        }
+      },
+      "arscis.fox.record/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.common": "1.13.0",
+          "arscis.fox.sensors": "1.0.0",
+          "mallenom.dvr": "1.4.0",
+          "mallenom.dvr.avistorage": "1.4.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.fox.record.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.fox.record.dll": {}
+        }
+      },
+      "arscis.fox.sensors/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.common": "1.13.0",
+          "arscis.fox.common": "1.0.0",
+          "arscis.fox.objects": "1.0.0",
+          "arscis.greenbox": "1.0.0",
+          "arscis.launch": "1.13.0",
+          "arscis.promeldku": "1.0.0",
+          "mallenom.imaging": "3.7.0",
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.fox.sensors.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.fox.sensors.dll": {}
+        }
+      },
+      "arscis.fox.videoinput/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.controls": "1.0.0",
+          "arscis.fox.alg.common": "1.0.0",
+          "arscis.fox.common": "1.0.0",
+          "mallenom.ipl": "1.7.0",
+          "mallenom.video": "4.8.0",
+          "mallenom.video.avi": "4.8.0",
+          "mallenom.video.avi.compressed": "4.8.0",
+          "mallenom.video.dshow": "3.2.0",
+          "mallenom.video.ipcam.bosch": "1.9.0",
+          "mallenom.video.ipcam.dshow": "1.9.0",
+          "mallenom.video.ipcam.linia": "1.9.0",
+          "mallenom.video.pci": "3.2.0",
+          "mallenom.video.pylon": "0.6.0",
+          "mallenom.video.vlc": "0.2.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.fox.videoinput.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.fox.videoinput.dll": {}
+        }
+      },
+      "arscis.greenbox/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.common": "1.13.0",
+          "mallenom.framework": "2.8.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.greenbox.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.greenbox.dll": {}
+        }
+      },
+      "arscis.promeldku/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.fox.common": "1.0.0",
+          "mallenom.framework": "2.8.0",
+          "mallenom.modbus": "1.1.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.promeldku.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.promeldku.dll": {}
         }
       }
     },
     ".NETFramework,Version=v4.7/win": {
-      "mallenom.ffmpeg/1.2.1": {
+      "arscis.common/1.13.0": {
         "type": "package",
+        "dependencies": {
+          "mallenom.framework": "2.8.0"
+        },
         "compile": {
-          "lib/net45/mallenom.ffmpeg.dll": {}
+          "lib/net47/arscis.common.dll": {}
         },
         "runtime": {
-          "lib/net45/mallenom.ffmpeg.dll": {}
+          "lib/net47/arscis.common.dll": {}
+        }
+      },
+      "arscis.launch/1.13.0": {
+        "type": "package",
+        "dependencies": {
+          "arscis.common": "1.13.0",
+          "mallenom.apputility": "1.8.0"
+        },
+        "compile": {
+          "lib/net47/arscis.launch.dll": {}
+        },
+        "runtime": {
+          "lib/net47/arscis.launch.dll": {}
+        }
+      },
+      "mallenom.apputility/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.framework": "2.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.apputility.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.apputility.dll": {}
+        }
+      },
+      "mallenom.dvr/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.dvr.storage": "1.4.0",
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net47/mallenom.dvr.dll": {},
+          "lib/net47/mallenom.dvr.storage.dll": {}
+        },
+        "runtime": {
+          "lib/net47/mallenom.dvr.dll": {},
+          "lib/net47/mallenom.dvr.storage.dll": {}
+        }
+      },
+      "mallenom.dvr.avistorage/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.dvr.storage": "1.4.0",
+          "mallenom.video.avi.compressed": "4.8.0"
+        },
+        "compile": {
+          "lib/net47/mallenom.dvr.avistorage.dll": {}
+        },
+        "runtime": {
+          "lib/net47/mallenom.dvr.avistorage.dll": {}
+        }
+      },
+      "mallenom.dvr.storage/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging": "3.7.0"
+        },
+        "compile": {
+          "lib/net47/mallenom.dvr.storage.dll": {}
+        },
+        "runtime": {
+          "lib/net47/mallenom.dvr.storage.dll": {}
         }
       },
       "mallenom.framework/2.8.0": {
@@ -405,25 +567,28 @@
           "lib/net45/mallenom.imaging.compressed.dll": {}
         }
       },
-      "mallenom.math/1.5.0": {
+      "mallenom.ipl/1.7.0": {
         "type": "package",
         "dependencies": {
-          "mallenom.framework": "2.8.0"
+          "mallenom.video": "4.8.0"
         },
         "compile": {
-          "lib/net45/mallenom.math.dll": {}
+          "lib/net45/mallenom.ipl.dll": {}
         },
         "runtime": {
-          "lib/net45/mallenom.math.dll": {}
+          "lib/net45/mallenom.ipl.dll": {}
         }
       },
-      "mallenom.neuronet/2.5.0": {
+      "mallenom.modbus/1.1.0": {
         "type": "package",
+        "dependencies": {
+          "mallenom.framework": "(, )"
+        },
         "compile": {
-          "lib/net45/mallenom.neuronet.dll": {}
+          "lib/mallenom.modbus.dll": {}
         },
         "runtime": {
-          "lib/net45/mallenom.neuronet.dll": {}
+          "lib/mallenom.modbus.dll": {}
         }
       },
       "mallenom.video/4.8.0": {
@@ -438,6 +603,31 @@
           "lib/net45/mallenom.video.dll": {}
         }
       },
+      "mallenom.video.avi/4.8.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.avi.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.avi.dll": {}
+        }
+      },
+      "mallenom.video.avi.compressed/4.8.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging.compressed": "3.7.0",
+          "mallenom.video.avi": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.avi.compressed.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.avi.compressed.dll": {}
+        }
+      },
       "mallenom.video.dshow/3.2.0": {
         "type": "package",
         "dependencies": {
@@ -448,19 +638,6 @@
         },
         "runtime": {
           "lib/net45/mallenom.video.dshow.dll": {}
-        }
-      },
-      "mallenom.video.ffmpeg/1.2.1": {
-        "type": "package",
-        "dependencies": {
-          "mallenom.ffmpeg": "1.2.1",
-          "mallenom.video": "4.8.0"
-        },
-        "compile": {
-          "lib/net45/mallenom.video.ffmpeg.dll": {}
-        },
-        "runtime": {
-          "lib/net45/mallenom.video.ffmpeg.dll": {}
         }
       },
       "mallenom.video.ipcam/1.9.0": {
@@ -476,6 +653,23 @@
           "lib/net45/mallenom.video.ipcam.dll": {}
         }
       },
+      "mallenom.video.ipcam.bosch/1.9.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging.compressed": "3.7.0",
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/Bosch.VideoSDK.GCALib.dll": {},
+          "lib/net45/Bosch.VideoSDK.StreamItemsLib.dll": {},
+          "lib/net45/mallenom.video.ipcam.bosch.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Bosch.VideoSDK.GCALib.dll": {},
+          "lib/net45/Bosch.VideoSDK.StreamItemsLib.dll": {},
+          "lib/net45/mallenom.video.ipcam.bosch.dll": {}
+        }
+      },
       "mallenom.video.ipcam.dshow/1.9.0": {
         "type": "package",
         "dependencies": {
@@ -488,249 +682,311 @@
           "lib/net45/mallenom.video.ipcam.dshow.dll": {}
         }
       },
-      "NUnit/3.7.1": {
+      "mallenom.video.ipcam.linia/1.9.0": {
         "type": "package",
+        "dependencies": {
+          "mallenom.video.ipcam": "1.9.0"
+        },
         "compile": {
-          "lib/net45/nunit.framework.dll": {}
+          "lib/net45/mallenom.video.ipcam.linia.dll": {}
         },
         "runtime": {
-          "lib/net45/nunit.framework.dll": {}
+          "lib/net45/mallenom.video.ipcam.linia.dll": {}
         }
       },
-      "recar2.ui/0.2.0": {
+      "mallenom.video.pci/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.pci.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.pci.dll": {}
+        }
+      },
+      "mallenom.video.pylon/0.6.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/Basler.Pylon.dll": {},
+          "lib/net45/mallenom.video.pylon.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Basler.Pylon.dll": {},
+          "lib/net45/mallenom.video.pylon.dll": {}
+        }
+      },
+      "mallenom.video.vlc/0.2.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0",
+          "mallenom.vlc": "0.2.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.vlc.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.vlc.dll": {}
+        }
+      },
+      "mallenom.videoserver.client/0.9.1": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging": "(, )"
+        },
+        "compile": {
+          "lib/net45/mallenom.videoserver.client.dll": {},
+          "lib/net45/mallenom.videoserver.contracts.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.videoserver.client.dll": {},
+          "lib/net45/mallenom.videoserver.contracts.dll": {}
+        }
+      },
+      "mallenom.vlc/0.2.0": {
         "type": "package",
         "dependencies": {
           "mallenom.imaging": "3.7.0"
         },
         "compile": {
-          "lib/net45/recar2.ui.dll": {}
+          "lib/net45/mallenom.vlc.dll": {}
         },
         "runtime": {
-          "lib/net45/recar2.ui.dll": {}
+          "lib/net45/mallenom.vlc.dll": {}
         }
       },
-      "recar2.algorithms/1.0.0": {
+      "arscis.controls/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
+        "framework": ".NETFramework,Version=v4.7",
         "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.platestencil": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.algorithms.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.algorithms.dll": {}
-        }
-      },
-      "recar2.algorithms.ui/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
+          "arscis.common": "1.13.0",
           "mallenom.imaging": "3.7.0",
-          "mallenom.video": "4.8.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.composite": "1.0.0",
-          "recar2.convenient": "1.0.0",
-          "recar2.decisions": "1.0.0",
-          "recar2.motion": "1.0.0",
-          "recar2.platelocalization": "1.0.0",
-          "recar2.platestencil": "1.0.0",
-          "recar2.recogstencil": "1.0.0",
-          "recar2.ui": "0.2.0",
-          "recar2.vehicledetection": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.algorithms.ui.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.algorithms.ui.dll": {}
-        }
-      },
-      "recar2.composite/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.convenient": "1.0.0",
-          "recar2.decisions": "1.0.0",
-          "recar2.motion": "1.0.0",
-          "recar2.platelocalization": "1.0.0",
-          "recar2.platestencil": "1.0.0",
-          "recar2.recogstencil": "1.0.0",
-          "recar2.vehicledetection": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.composite.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.composite.dll": {}
-        }
-      },
-      "recar2.convenient/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.convenient.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.convenient.dll": {}
-        }
-      },
-      "recar2.decisions/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.platestencil": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.decisions.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.decisions.dll": {}
-        }
-      },
-      "recar2.models/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/recar2.models.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.models.dll": {}
-        }
-      },
-      "recar2.models.loader/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.math": "1.5.0",
-          "mallenom.neuronet": "2.5.0",
-          "recar2.platestencil": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.models.loader.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.models.loader.dll": {}
-        }
-      },
-      "recar2.models.noenc/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/recar2.models.noenc.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.models.noenc.dll": {}
-        }
-      },
-      "recar2.motion/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.motion.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.motion.dll": {}
-        }
-      },
-      "recar2.platelocalization/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.platelocalization.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.platelocalization.dll": {}
-        }
-      },
-      "recar2.platestencil/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/recar2.platestencil.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.platestencil.dll": {}
-        }
-      },
-      "recar2.recogstencil/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.models.loader": "1.0.0",
-          "recar2.platestencil": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.recogstencil.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.recogstencil.dll": {}
-        }
-      },
-      "recar2.tests.common/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "NUnit": "3.7.1",
           "mallenom.imaging.compressed": "3.7.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.algorithms.ui": "1.0.0",
-          "recar2.composite": "1.0.0",
-          "recar2.convenient": "1.0.0",
-          "recar2.decisions": "1.0.0",
-          "recar2.models.loader": "1.0.0",
-          "recar2.models.noenc": "1.0.0",
-          "recar2.platestencil": "1.0.0",
-          "recar2.recogstencil": "1.0.0"
+          "mallenom.videoserver.client": "0.9.1"
         },
         "compile": {
-          "bin/placeholder/recar2.tests.common.dll": {}
+          "bin/placeholder/arscis.controls.dll": {}
         },
         "runtime": {
-          "bin/placeholder/recar2.tests.common.dll": {}
+          "bin/placeholder/arscis.controls.dll": {}
         }
       },
-      "recar2.vehicledetection/1.0.0": {
+      "arscis.fox.alg.common/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
+        "framework": ".NETFramework,Version=v4.7",
         "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.recogstencil": "1.0.0"
+          "arscis.fox.common": "1.0.0",
+          "arscis.fox.objects": "1.0.0",
+          "arscis.fox.sensors": "1.0.0",
+          "mallenom.imaging": "3.7.0",
+          "mallenom.video": "4.8.0"
         },
         "compile": {
-          "bin/placeholder/recar2.vehicledetection.dll": {}
+          "bin/placeholder/arscis.fox.alg.common.dll": {}
         },
         "runtime": {
-          "bin/placeholder/recar2.vehicledetection.dll": {}
+          "bin/placeholder/arscis.fox.alg.common.dll": {}
+        }
+      },
+      "arscis.fox.common/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.common": "1.13.0",
+          "mallenom.framework": "2.8.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.fox.common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.fox.common.dll": {}
+        }
+      },
+      "arscis.fox.objects/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.common": "1.13.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.fox.objects.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.fox.objects.dll": {}
+        }
+      },
+      "arscis.fox.record/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.common": "1.13.0",
+          "arscis.fox.sensors": "1.0.0",
+          "mallenom.dvr": "1.4.0",
+          "mallenom.dvr.avistorage": "1.4.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.fox.record.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.fox.record.dll": {}
+        }
+      },
+      "arscis.fox.sensors/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.common": "1.13.0",
+          "arscis.fox.common": "1.0.0",
+          "arscis.fox.objects": "1.0.0",
+          "arscis.greenbox": "1.0.0",
+          "arscis.launch": "1.13.0",
+          "arscis.promeldku": "1.0.0",
+          "mallenom.imaging": "3.7.0",
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.fox.sensors.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.fox.sensors.dll": {}
+        }
+      },
+      "arscis.fox.videoinput/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.controls": "1.0.0",
+          "arscis.fox.alg.common": "1.0.0",
+          "arscis.fox.common": "1.0.0",
+          "mallenom.ipl": "1.7.0",
+          "mallenom.video": "4.8.0",
+          "mallenom.video.avi": "4.8.0",
+          "mallenom.video.avi.compressed": "4.8.0",
+          "mallenom.video.dshow": "3.2.0",
+          "mallenom.video.ipcam.bosch": "1.9.0",
+          "mallenom.video.ipcam.dshow": "1.9.0",
+          "mallenom.video.ipcam.linia": "1.9.0",
+          "mallenom.video.pci": "3.2.0",
+          "mallenom.video.pylon": "0.6.0",
+          "mallenom.video.vlc": "0.2.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.fox.videoinput.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.fox.videoinput.dll": {}
+        }
+      },
+      "arscis.greenbox/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.common": "1.13.0",
+          "mallenom.framework": "2.8.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.greenbox.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.greenbox.dll": {}
+        }
+      },
+      "arscis.promeldku/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.fox.common": "1.0.0",
+          "mallenom.framework": "2.8.0",
+          "mallenom.modbus": "1.1.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.promeldku.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.promeldku.dll": {}
         }
       }
     },
     ".NETFramework,Version=v4.7/win-x64": {
-      "mallenom.ffmpeg/1.2.1": {
+      "arscis.common/1.13.0": {
         "type": "package",
+        "dependencies": {
+          "mallenom.framework": "2.8.0"
+        },
         "compile": {
-          "lib/net45/mallenom.ffmpeg.dll": {}
+          "lib/net47/arscis.common.dll": {}
         },
         "runtime": {
-          "lib/net45/mallenom.ffmpeg.dll": {}
+          "lib/net47/arscis.common.dll": {}
+        }
+      },
+      "arscis.launch/1.13.0": {
+        "type": "package",
+        "dependencies": {
+          "arscis.common": "1.13.0",
+          "mallenom.apputility": "1.8.0"
+        },
+        "compile": {
+          "lib/net47/arscis.launch.dll": {}
+        },
+        "runtime": {
+          "lib/net47/arscis.launch.dll": {}
+        }
+      },
+      "mallenom.apputility/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.framework": "2.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.apputility.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.apputility.dll": {}
+        }
+      },
+      "mallenom.dvr/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.dvr.storage": "1.4.0",
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net47/mallenom.dvr.dll": {},
+          "lib/net47/mallenom.dvr.storage.dll": {}
+        },
+        "runtime": {
+          "lib/net47/mallenom.dvr.dll": {},
+          "lib/net47/mallenom.dvr.storage.dll": {}
+        }
+      },
+      "mallenom.dvr.avistorage/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.dvr.storage": "1.4.0",
+          "mallenom.video.avi.compressed": "4.8.0"
+        },
+        "compile": {
+          "lib/net47/mallenom.dvr.avistorage.dll": {}
+        },
+        "runtime": {
+          "lib/net47/mallenom.dvr.avistorage.dll": {}
+        }
+      },
+      "mallenom.dvr.storage/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging": "3.7.0"
+        },
+        "compile": {
+          "lib/net47/mallenom.dvr.storage.dll": {}
+        },
+        "runtime": {
+          "lib/net47/mallenom.dvr.storage.dll": {}
         }
       },
       "mallenom.framework/2.8.0": {
@@ -766,25 +1022,28 @@
           "lib/net45/mallenom.imaging.compressed.dll": {}
         }
       },
-      "mallenom.math/1.5.0": {
+      "mallenom.ipl/1.7.0": {
         "type": "package",
         "dependencies": {
-          "mallenom.framework": "2.8.0"
+          "mallenom.video": "4.8.0"
         },
         "compile": {
-          "lib/net45/mallenom.math.dll": {}
+          "lib/net45/mallenom.ipl.dll": {}
         },
         "runtime": {
-          "lib/net45/mallenom.math.dll": {}
+          "lib/net45/mallenom.ipl.dll": {}
         }
       },
-      "mallenom.neuronet/2.5.0": {
+      "mallenom.modbus/1.1.0": {
         "type": "package",
+        "dependencies": {
+          "mallenom.framework": "(, )"
+        },
         "compile": {
-          "lib/net45/mallenom.neuronet.dll": {}
+          "lib/mallenom.modbus.dll": {}
         },
         "runtime": {
-          "lib/net45/mallenom.neuronet.dll": {}
+          "lib/mallenom.modbus.dll": {}
         }
       },
       "mallenom.video/4.8.0": {
@@ -799,6 +1058,31 @@
           "lib/net45/mallenom.video.dll": {}
         }
       },
+      "mallenom.video.avi/4.8.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.avi.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.avi.dll": {}
+        }
+      },
+      "mallenom.video.avi.compressed/4.8.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging.compressed": "3.7.0",
+          "mallenom.video.avi": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.avi.compressed.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.avi.compressed.dll": {}
+        }
+      },
       "mallenom.video.dshow/3.2.0": {
         "type": "package",
         "dependencies": {
@@ -809,19 +1093,6 @@
         },
         "runtime": {
           "lib/net45/mallenom.video.dshow.dll": {}
-        }
-      },
-      "mallenom.video.ffmpeg/1.2.1": {
-        "type": "package",
-        "dependencies": {
-          "mallenom.ffmpeg": "1.2.1",
-          "mallenom.video": "4.8.0"
-        },
-        "compile": {
-          "lib/net45/mallenom.video.ffmpeg.dll": {}
-        },
-        "runtime": {
-          "lib/net45/mallenom.video.ffmpeg.dll": {}
         }
       },
       "mallenom.video.ipcam/1.9.0": {
@@ -837,6 +1108,23 @@
           "lib/net45/mallenom.video.ipcam.dll": {}
         }
       },
+      "mallenom.video.ipcam.bosch/1.9.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging.compressed": "3.7.0",
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/Bosch.VideoSDK.GCALib.dll": {},
+          "lib/net45/Bosch.VideoSDK.StreamItemsLib.dll": {},
+          "lib/net45/mallenom.video.ipcam.bosch.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Bosch.VideoSDK.GCALib.dll": {},
+          "lib/net45/Bosch.VideoSDK.StreamItemsLib.dll": {},
+          "lib/net45/mallenom.video.ipcam.bosch.dll": {}
+        }
+      },
       "mallenom.video.ipcam.dshow/1.9.0": {
         "type": "package",
         "dependencies": {
@@ -849,249 +1137,311 @@
           "lib/net45/mallenom.video.ipcam.dshow.dll": {}
         }
       },
-      "NUnit/3.7.1": {
+      "mallenom.video.ipcam.linia/1.9.0": {
         "type": "package",
+        "dependencies": {
+          "mallenom.video.ipcam": "1.9.0"
+        },
         "compile": {
-          "lib/net45/nunit.framework.dll": {}
+          "lib/net45/mallenom.video.ipcam.linia.dll": {}
         },
         "runtime": {
-          "lib/net45/nunit.framework.dll": {}
+          "lib/net45/mallenom.video.ipcam.linia.dll": {}
         }
       },
-      "recar2.ui/0.2.0": {
+      "mallenom.video.pci/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.pci.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.pci.dll": {}
+        }
+      },
+      "mallenom.video.pylon/0.6.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/Basler.Pylon.dll": {},
+          "lib/net45/mallenom.video.pylon.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Basler.Pylon.dll": {},
+          "lib/net45/mallenom.video.pylon.dll": {}
+        }
+      },
+      "mallenom.video.vlc/0.2.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0",
+          "mallenom.vlc": "0.2.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.vlc.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.vlc.dll": {}
+        }
+      },
+      "mallenom.videoserver.client/0.9.1": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging": "(, )"
+        },
+        "compile": {
+          "lib/net45/mallenom.videoserver.client.dll": {},
+          "lib/net45/mallenom.videoserver.contracts.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.videoserver.client.dll": {},
+          "lib/net45/mallenom.videoserver.contracts.dll": {}
+        }
+      },
+      "mallenom.vlc/0.2.0": {
         "type": "package",
         "dependencies": {
           "mallenom.imaging": "3.7.0"
         },
         "compile": {
-          "lib/net45/recar2.ui.dll": {}
+          "lib/net45/mallenom.vlc.dll": {}
         },
         "runtime": {
-          "lib/net45/recar2.ui.dll": {}
+          "lib/net45/mallenom.vlc.dll": {}
         }
       },
-      "recar2.algorithms/1.0.0": {
+      "arscis.controls/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
+        "framework": ".NETFramework,Version=v4.7",
         "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.platestencil": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.algorithms.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.algorithms.dll": {}
-        }
-      },
-      "recar2.algorithms.ui/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
+          "arscis.common": "1.13.0",
           "mallenom.imaging": "3.7.0",
-          "mallenom.video": "4.8.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.composite": "1.0.0",
-          "recar2.convenient": "1.0.0",
-          "recar2.decisions": "1.0.0",
-          "recar2.motion": "1.0.0",
-          "recar2.platelocalization": "1.0.0",
-          "recar2.platestencil": "1.0.0",
-          "recar2.recogstencil": "1.0.0",
-          "recar2.ui": "0.2.0",
-          "recar2.vehicledetection": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.algorithms.ui.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.algorithms.ui.dll": {}
-        }
-      },
-      "recar2.composite/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.convenient": "1.0.0",
-          "recar2.decisions": "1.0.0",
-          "recar2.motion": "1.0.0",
-          "recar2.platelocalization": "1.0.0",
-          "recar2.platestencil": "1.0.0",
-          "recar2.recogstencil": "1.0.0",
-          "recar2.vehicledetection": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.composite.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.composite.dll": {}
-        }
-      },
-      "recar2.convenient/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.convenient.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.convenient.dll": {}
-        }
-      },
-      "recar2.decisions/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.platestencil": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.decisions.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.decisions.dll": {}
-        }
-      },
-      "recar2.models/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/recar2.models.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.models.dll": {}
-        }
-      },
-      "recar2.models.loader/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.math": "1.5.0",
-          "mallenom.neuronet": "2.5.0",
-          "recar2.platestencil": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.models.loader.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.models.loader.dll": {}
-        }
-      },
-      "recar2.models.noenc/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/recar2.models.noenc.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.models.noenc.dll": {}
-        }
-      },
-      "recar2.motion/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.motion.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.motion.dll": {}
-        }
-      },
-      "recar2.platelocalization/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.platelocalization.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.platelocalization.dll": {}
-        }
-      },
-      "recar2.platestencil/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/recar2.platestencil.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.platestencil.dll": {}
-        }
-      },
-      "recar2.recogstencil/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.models.loader": "1.0.0",
-          "recar2.platestencil": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.recogstencil.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.recogstencil.dll": {}
-        }
-      },
-      "recar2.tests.common/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "NUnit": "3.7.1",
           "mallenom.imaging.compressed": "3.7.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.algorithms.ui": "1.0.0",
-          "recar2.composite": "1.0.0",
-          "recar2.convenient": "1.0.0",
-          "recar2.decisions": "1.0.0",
-          "recar2.models.loader": "1.0.0",
-          "recar2.models.noenc": "1.0.0",
-          "recar2.platestencil": "1.0.0",
-          "recar2.recogstencil": "1.0.0"
+          "mallenom.videoserver.client": "0.9.1"
         },
         "compile": {
-          "bin/placeholder/recar2.tests.common.dll": {}
+          "bin/placeholder/arscis.controls.dll": {}
         },
         "runtime": {
-          "bin/placeholder/recar2.tests.common.dll": {}
+          "bin/placeholder/arscis.controls.dll": {}
         }
       },
-      "recar2.vehicledetection/1.0.0": {
+      "arscis.fox.alg.common/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
+        "framework": ".NETFramework,Version=v4.7",
         "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.recogstencil": "1.0.0"
+          "arscis.fox.common": "1.0.0",
+          "arscis.fox.objects": "1.0.0",
+          "arscis.fox.sensors": "1.0.0",
+          "mallenom.imaging": "3.7.0",
+          "mallenom.video": "4.8.0"
         },
         "compile": {
-          "bin/placeholder/recar2.vehicledetection.dll": {}
+          "bin/placeholder/arscis.fox.alg.common.dll": {}
         },
         "runtime": {
-          "bin/placeholder/recar2.vehicledetection.dll": {}
+          "bin/placeholder/arscis.fox.alg.common.dll": {}
+        }
+      },
+      "arscis.fox.common/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.common": "1.13.0",
+          "mallenom.framework": "2.8.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.fox.common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.fox.common.dll": {}
+        }
+      },
+      "arscis.fox.objects/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.common": "1.13.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.fox.objects.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.fox.objects.dll": {}
+        }
+      },
+      "arscis.fox.record/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.common": "1.13.0",
+          "arscis.fox.sensors": "1.0.0",
+          "mallenom.dvr": "1.4.0",
+          "mallenom.dvr.avistorage": "1.4.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.fox.record.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.fox.record.dll": {}
+        }
+      },
+      "arscis.fox.sensors/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.common": "1.13.0",
+          "arscis.fox.common": "1.0.0",
+          "arscis.fox.objects": "1.0.0",
+          "arscis.greenbox": "1.0.0",
+          "arscis.launch": "1.13.0",
+          "arscis.promeldku": "1.0.0",
+          "mallenom.imaging": "3.7.0",
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.fox.sensors.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.fox.sensors.dll": {}
+        }
+      },
+      "arscis.fox.videoinput/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.controls": "1.0.0",
+          "arscis.fox.alg.common": "1.0.0",
+          "arscis.fox.common": "1.0.0",
+          "mallenom.ipl": "1.7.0",
+          "mallenom.video": "4.8.0",
+          "mallenom.video.avi": "4.8.0",
+          "mallenom.video.avi.compressed": "4.8.0",
+          "mallenom.video.dshow": "3.2.0",
+          "mallenom.video.ipcam.bosch": "1.9.0",
+          "mallenom.video.ipcam.dshow": "1.9.0",
+          "mallenom.video.ipcam.linia": "1.9.0",
+          "mallenom.video.pci": "3.2.0",
+          "mallenom.video.pylon": "0.6.0",
+          "mallenom.video.vlc": "0.2.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.fox.videoinput.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.fox.videoinput.dll": {}
+        }
+      },
+      "arscis.greenbox/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.common": "1.13.0",
+          "mallenom.framework": "2.8.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.greenbox.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.greenbox.dll": {}
+        }
+      },
+      "arscis.promeldku/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.fox.common": "1.0.0",
+          "mallenom.framework": "2.8.0",
+          "mallenom.modbus": "1.1.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.promeldku.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.promeldku.dll": {}
         }
       }
     },
     ".NETFramework,Version=v4.7/win-x86": {
-      "mallenom.ffmpeg/1.2.1": {
+      "arscis.common/1.13.0": {
         "type": "package",
+        "dependencies": {
+          "mallenom.framework": "2.8.0"
+        },
         "compile": {
-          "lib/net45/mallenom.ffmpeg.dll": {}
+          "lib/net47/arscis.common.dll": {}
         },
         "runtime": {
-          "lib/net45/mallenom.ffmpeg.dll": {}
+          "lib/net47/arscis.common.dll": {}
+        }
+      },
+      "arscis.launch/1.13.0": {
+        "type": "package",
+        "dependencies": {
+          "arscis.common": "1.13.0",
+          "mallenom.apputility": "1.8.0"
+        },
+        "compile": {
+          "lib/net47/arscis.launch.dll": {}
+        },
+        "runtime": {
+          "lib/net47/arscis.launch.dll": {}
+        }
+      },
+      "mallenom.apputility/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.framework": "2.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.apputility.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.apputility.dll": {}
+        }
+      },
+      "mallenom.dvr/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.dvr.storage": "1.4.0",
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net47/mallenom.dvr.dll": {},
+          "lib/net47/mallenom.dvr.storage.dll": {}
+        },
+        "runtime": {
+          "lib/net47/mallenom.dvr.dll": {},
+          "lib/net47/mallenom.dvr.storage.dll": {}
+        }
+      },
+      "mallenom.dvr.avistorage/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.dvr.storage": "1.4.0",
+          "mallenom.video.avi.compressed": "4.8.0"
+        },
+        "compile": {
+          "lib/net47/mallenom.dvr.avistorage.dll": {}
+        },
+        "runtime": {
+          "lib/net47/mallenom.dvr.avistorage.dll": {}
+        }
+      },
+      "mallenom.dvr.storage/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging": "3.7.0"
+        },
+        "compile": {
+          "lib/net47/mallenom.dvr.storage.dll": {}
+        },
+        "runtime": {
+          "lib/net47/mallenom.dvr.storage.dll": {}
         }
       },
       "mallenom.framework/2.8.0": {
@@ -1127,25 +1477,28 @@
           "lib/net45/mallenom.imaging.compressed.dll": {}
         }
       },
-      "mallenom.math/1.5.0": {
+      "mallenom.ipl/1.7.0": {
         "type": "package",
         "dependencies": {
-          "mallenom.framework": "2.8.0"
+          "mallenom.video": "4.8.0"
         },
         "compile": {
-          "lib/net45/mallenom.math.dll": {}
+          "lib/net45/mallenom.ipl.dll": {}
         },
         "runtime": {
-          "lib/net45/mallenom.math.dll": {}
+          "lib/net45/mallenom.ipl.dll": {}
         }
       },
-      "mallenom.neuronet/2.5.0": {
+      "mallenom.modbus/1.1.0": {
         "type": "package",
+        "dependencies": {
+          "mallenom.framework": "(, )"
+        },
         "compile": {
-          "lib/net45/mallenom.neuronet.dll": {}
+          "lib/mallenom.modbus.dll": {}
         },
         "runtime": {
-          "lib/net45/mallenom.neuronet.dll": {}
+          "lib/mallenom.modbus.dll": {}
         }
       },
       "mallenom.video/4.8.0": {
@@ -1160,6 +1513,31 @@
           "lib/net45/mallenom.video.dll": {}
         }
       },
+      "mallenom.video.avi/4.8.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.avi.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.avi.dll": {}
+        }
+      },
+      "mallenom.video.avi.compressed/4.8.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging.compressed": "3.7.0",
+          "mallenom.video.avi": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.avi.compressed.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.avi.compressed.dll": {}
+        }
+      },
       "mallenom.video.dshow/3.2.0": {
         "type": "package",
         "dependencies": {
@@ -1170,19 +1548,6 @@
         },
         "runtime": {
           "lib/net45/mallenom.video.dshow.dll": {}
-        }
-      },
-      "mallenom.video.ffmpeg/1.2.1": {
-        "type": "package",
-        "dependencies": {
-          "mallenom.ffmpeg": "1.2.1",
-          "mallenom.video": "4.8.0"
-        },
-        "compile": {
-          "lib/net45/mallenom.video.ffmpeg.dll": {}
-        },
-        "runtime": {
-          "lib/net45/mallenom.video.ffmpeg.dll": {}
         }
       },
       "mallenom.video.ipcam/1.9.0": {
@@ -1198,6 +1563,23 @@
           "lib/net45/mallenom.video.ipcam.dll": {}
         }
       },
+      "mallenom.video.ipcam.bosch/1.9.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging.compressed": "3.7.0",
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/Bosch.VideoSDK.GCALib.dll": {},
+          "lib/net45/Bosch.VideoSDK.StreamItemsLib.dll": {},
+          "lib/net45/mallenom.video.ipcam.bosch.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Bosch.VideoSDK.GCALib.dll": {},
+          "lib/net45/Bosch.VideoSDK.StreamItemsLib.dll": {},
+          "lib/net45/mallenom.video.ipcam.bosch.dll": {}
+        }
+      },
       "mallenom.video.ipcam.dshow/1.9.0": {
         "type": "package",
         "dependencies": {
@@ -1210,258 +1592,310 @@
           "lib/net45/mallenom.video.ipcam.dshow.dll": {}
         }
       },
-      "NUnit/3.7.1": {
+      "mallenom.video.ipcam.linia/1.9.0": {
         "type": "package",
+        "dependencies": {
+          "mallenom.video.ipcam": "1.9.0"
+        },
         "compile": {
-          "lib/net45/nunit.framework.dll": {}
+          "lib/net45/mallenom.video.ipcam.linia.dll": {}
         },
         "runtime": {
-          "lib/net45/nunit.framework.dll": {}
+          "lib/net45/mallenom.video.ipcam.linia.dll": {}
         }
       },
-      "recar2.ui/0.2.0": {
+      "mallenom.video.pci/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.pci.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.pci.dll": {}
+        }
+      },
+      "mallenom.video.pylon/0.6.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "lib/net45/Basler.Pylon.dll": {},
+          "lib/net45/mallenom.video.pylon.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Basler.Pylon.dll": {},
+          "lib/net45/mallenom.video.pylon.dll": {}
+        }
+      },
+      "mallenom.video.vlc/0.2.0": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.video": "4.8.0",
+          "mallenom.vlc": "0.2.0"
+        },
+        "compile": {
+          "lib/net45/mallenom.video.vlc.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.video.vlc.dll": {}
+        }
+      },
+      "mallenom.videoserver.client/0.9.1": {
+        "type": "package",
+        "dependencies": {
+          "mallenom.imaging": "(, )"
+        },
+        "compile": {
+          "lib/net45/mallenom.videoserver.client.dll": {},
+          "lib/net45/mallenom.videoserver.contracts.dll": {}
+        },
+        "runtime": {
+          "lib/net45/mallenom.videoserver.client.dll": {},
+          "lib/net45/mallenom.videoserver.contracts.dll": {}
+        }
+      },
+      "mallenom.vlc/0.2.0": {
         "type": "package",
         "dependencies": {
           "mallenom.imaging": "3.7.0"
         },
         "compile": {
-          "lib/net45/recar2.ui.dll": {}
+          "lib/net45/mallenom.vlc.dll": {}
         },
         "runtime": {
-          "lib/net45/recar2.ui.dll": {}
+          "lib/net45/mallenom.vlc.dll": {}
         }
       },
-      "recar2.algorithms/1.0.0": {
+      "arscis.controls/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
+        "framework": ".NETFramework,Version=v4.7",
         "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.platestencil": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.algorithms.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.algorithms.dll": {}
-        }
-      },
-      "recar2.algorithms.ui/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
+          "arscis.common": "1.13.0",
           "mallenom.imaging": "3.7.0",
-          "mallenom.video": "4.8.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.composite": "1.0.0",
-          "recar2.convenient": "1.0.0",
-          "recar2.decisions": "1.0.0",
-          "recar2.motion": "1.0.0",
-          "recar2.platelocalization": "1.0.0",
-          "recar2.platestencil": "1.0.0",
-          "recar2.recogstencil": "1.0.0",
-          "recar2.ui": "0.2.0",
-          "recar2.vehicledetection": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.algorithms.ui.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.algorithms.ui.dll": {}
-        }
-      },
-      "recar2.composite/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.convenient": "1.0.0",
-          "recar2.decisions": "1.0.0",
-          "recar2.motion": "1.0.0",
-          "recar2.platelocalization": "1.0.0",
-          "recar2.platestencil": "1.0.0",
-          "recar2.recogstencil": "1.0.0",
-          "recar2.vehicledetection": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.composite.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.composite.dll": {}
-        }
-      },
-      "recar2.convenient/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.convenient.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.convenient.dll": {}
-        }
-      },
-      "recar2.decisions/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.platestencil": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.decisions.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.decisions.dll": {}
-        }
-      },
-      "recar2.models/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/recar2.models.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.models.dll": {}
-        }
-      },
-      "recar2.models.loader/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.math": "1.5.0",
-          "mallenom.neuronet": "2.5.0",
-          "recar2.platestencil": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.models.loader.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.models.loader.dll": {}
-        }
-      },
-      "recar2.models.noenc/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/recar2.models.noenc.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.models.noenc.dll": {}
-        }
-      },
-      "recar2.motion/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.motion.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.motion.dll": {}
-        }
-      },
-      "recar2.platelocalization/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.platelocalization.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.platelocalization.dll": {}
-        }
-      },
-      "recar2.platestencil/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/recar2.platestencil.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.platestencil.dll": {}
-        }
-      },
-      "recar2.recogstencil/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.models.loader": "1.0.0",
-          "recar2.platestencil": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/recar2.recogstencil.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/recar2.recogstencil.dll": {}
-        }
-      },
-      "recar2.tests.common/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
-        "dependencies": {
-          "NUnit": "3.7.1",
           "mallenom.imaging.compressed": "3.7.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.algorithms.ui": "1.0.0",
-          "recar2.composite": "1.0.0",
-          "recar2.convenient": "1.0.0",
-          "recar2.decisions": "1.0.0",
-          "recar2.models.loader": "1.0.0",
-          "recar2.models.noenc": "1.0.0",
-          "recar2.platestencil": "1.0.0",
-          "recar2.recogstencil": "1.0.0"
+          "mallenom.videoserver.client": "0.9.1"
         },
         "compile": {
-          "bin/placeholder/recar2.tests.common.dll": {}
+          "bin/placeholder/arscis.controls.dll": {}
         },
         "runtime": {
-          "bin/placeholder/recar2.tests.common.dll": {}
+          "bin/placeholder/arscis.controls.dll": {}
         }
       },
-      "recar2.vehicledetection/1.0.0": {
+      "arscis.fox.alg.common/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.5",
+        "framework": ".NETFramework,Version=v4.7",
         "dependencies": {
-          "mallenom.framework": "2.8.0",
-          "recar2.algorithms": "1.0.0",
-          "recar2.recogstencil": "1.0.0"
+          "arscis.fox.common": "1.0.0",
+          "arscis.fox.objects": "1.0.0",
+          "arscis.fox.sensors": "1.0.0",
+          "mallenom.imaging": "3.7.0",
+          "mallenom.video": "4.8.0"
         },
         "compile": {
-          "bin/placeholder/recar2.vehicledetection.dll": {}
+          "bin/placeholder/arscis.fox.alg.common.dll": {}
         },
         "runtime": {
-          "bin/placeholder/recar2.vehicledetection.dll": {}
+          "bin/placeholder/arscis.fox.alg.common.dll": {}
+        }
+      },
+      "arscis.fox.common/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.common": "1.13.0",
+          "mallenom.framework": "2.8.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.fox.common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.fox.common.dll": {}
+        }
+      },
+      "arscis.fox.objects/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.common": "1.13.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.fox.objects.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.fox.objects.dll": {}
+        }
+      },
+      "arscis.fox.record/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.common": "1.13.0",
+          "arscis.fox.sensors": "1.0.0",
+          "mallenom.dvr": "1.4.0",
+          "mallenom.dvr.avistorage": "1.4.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.fox.record.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.fox.record.dll": {}
+        }
+      },
+      "arscis.fox.sensors/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.common": "1.13.0",
+          "arscis.fox.common": "1.0.0",
+          "arscis.fox.objects": "1.0.0",
+          "arscis.greenbox": "1.0.0",
+          "arscis.launch": "1.13.0",
+          "arscis.promeldku": "1.0.0",
+          "mallenom.imaging": "3.7.0",
+          "mallenom.video": "4.8.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.fox.sensors.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.fox.sensors.dll": {}
+        }
+      },
+      "arscis.fox.videoinput/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.controls": "1.0.0",
+          "arscis.fox.alg.common": "1.0.0",
+          "arscis.fox.common": "1.0.0",
+          "mallenom.ipl": "1.7.0",
+          "mallenom.video": "4.8.0",
+          "mallenom.video.avi": "4.8.0",
+          "mallenom.video.avi.compressed": "4.8.0",
+          "mallenom.video.dshow": "3.2.0",
+          "mallenom.video.ipcam.bosch": "1.9.0",
+          "mallenom.video.ipcam.dshow": "1.9.0",
+          "mallenom.video.ipcam.linia": "1.9.0",
+          "mallenom.video.pci": "3.2.0",
+          "mallenom.video.pylon": "0.6.0",
+          "mallenom.video.vlc": "0.2.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.fox.videoinput.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.fox.videoinput.dll": {}
+        }
+      },
+      "arscis.greenbox/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.common": "1.13.0",
+          "mallenom.framework": "2.8.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.greenbox.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.greenbox.dll": {}
+        }
+      },
+      "arscis.promeldku/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7",
+        "dependencies": {
+          "arscis.fox.common": "1.0.0",
+          "mallenom.framework": "2.8.0",
+          "mallenom.modbus": "1.1.0"
+        },
+        "compile": {
+          "bin/placeholder/arscis.promeldku.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/arscis.promeldku.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "mallenom.ffmpeg/1.2.1": {
-      "sha512": "V1O4X/pVOHs3hv0Pyga6f2NOtjyLRbTcIHJoFRqRrucuwy6OWSvdlHrF/A3GTnXltfE2Q+JaEE1WPyiyiiBACA==",
+    "arscis.common/1.13.0": {
+      "sha512": "/52CHQoCy7MPD4C98GMjA4CpHiv0zkaZidsYAAW1vyNiWxXq/1Evjh7UvhlCdYWWfpXvK79/RM50q2arAB0kZQ==",
       "type": "package",
-      "path": "mallenom.ffmpeg/1.2.1",
+      "path": "arscis.common/1.13.0",
       "files": [
-        "lib/net45/mallenom.ffmpeg.dll",
-        "lib/net45/mallenom.ffmpeg.dll.metagen",
-        "lib/net45/mallenom.ffmpeg.pdb",
-        "lib/net45/mallenom.ffmpeg.xml",
-        "lib_x64/net45/mallenom.ffmpeg.dll",
-        "lib_x64/net45/mallenom.ffmpeg.dll.metagen",
-        "lib_x64/net45/mallenom.ffmpeg.pdb",
-        "lib_x64/net45/mallenom.ffmpeg.xml",
-        "mallenom.ffmpeg.1.2.1.nupkg.sha512",
-        "mallenom.ffmpeg.nuspec"
+        "arscis.common.1.13.0.nupkg.sha512",
+        "arscis.common.nuspec",
+        "lib/net47/arscis.common.dll",
+        "lib/net47/arscis.common.pdb",
+        "lib/net47/arscis.common.xml"
+      ]
+    },
+    "arscis.launch/1.13.0": {
+      "sha512": "KJ54AINxLLLX4Ieayn3E955w1DfYqERmbqoHEFiJumF/JgAHh04SDlVVmrQ9ICjbynAJOEEOIhj11UcWrHs6hw==",
+      "type": "package",
+      "path": "arscis.launch/1.13.0",
+      "files": [
+        "arscis.launch.1.13.0.nupkg.sha512",
+        "arscis.launch.nuspec",
+        "lib/net47/arscis.launch.dll",
+        "lib/net47/arscis.launch.pdb",
+        "lib/net47/arscis.launch.xml"
+      ]
+    },
+    "mallenom.apputility/1.8.0": {
+      "sha512": "q6qP6xwJ0sqs5RQo/eIbimsXjL/ZFfM1hdJBSRZgr2BWNuqf+2+SGRpOb8HEnIEJlWYhw9V3aBlPrhAZfhj7+w==",
+      "type": "package",
+      "path": "mallenom.apputility/1.8.0",
+      "files": [
+        "lib/net45/mallenom.apputility.dll",
+        "lib/net45/mallenom.apputility.pdb",
+        "lib/net45/mallenom.apputility.xml",
+        "mallenom.apputility.1.8.0.nupkg.sha512",
+        "mallenom.apputility.nuspec"
+      ]
+    },
+    "mallenom.dvr/1.4.0": {
+      "sha512": "K5Yues6JHu26civDGEfyz8fhxKtb1i8KUhtFxArG5rk7ODnpS8FyifiCDADxjcbJ0vx5FOJWt79Mx0bRQzbGBw==",
+      "type": "package",
+      "path": "mallenom.dvr/1.4.0",
+      "files": [
+        "lib/net47/mallenom.dvr.dll",
+        "lib/net47/mallenom.dvr.pdb",
+        "lib/net47/mallenom.dvr.storage.dll",
+        "lib/net47/mallenom.dvr.storage.pdb",
+        "lib/net47/mallenom.dvr.storage.xml",
+        "lib/net47/mallenom.dvr.xml",
+        "mallenom.dvr.1.4.0.nupkg.sha512",
+        "mallenom.dvr.nuspec"
+      ]
+    },
+    "mallenom.dvr.avistorage/1.4.0": {
+      "sha512": "49bxsyD/g6jxsonFj86KEaTRCvirsq8oxa1oPfYanXSVUw37EhR+h38hFiwVYYka54gIyKNYO5NdnTmTnUikfw==",
+      "type": "package",
+      "path": "mallenom.dvr.avistorage/1.4.0",
+      "files": [
+        "lib/net47/mallenom.dvr.avistorage.dll",
+        "lib/net47/mallenom.dvr.avistorage.pdb",
+        "lib/net47/mallenom.dvr.avistorage.xml",
+        "mallenom.dvr.avistorage.1.4.0.nupkg.sha512",
+        "mallenom.dvr.avistorage.nuspec"
+      ]
+    },
+    "mallenom.dvr.storage/1.4.0": {
+      "sha512": "2+EPYIW8G+1dI4plgUE2mAupFzXCo9UQNhel8tzWrVYQZjy0fhlmc1vxuToODrTWz06JhUuFWmA3wtx63zj04Q==",
+      "type": "package",
+      "path": "mallenom.dvr.storage/1.4.0",
+      "files": [
+        "lib/net47/mallenom.dvr.storage.dll",
+        "lib/net47/mallenom.dvr.storage.pdb",
+        "lib/net47/mallenom.dvr.storage.xml",
+        "mallenom.dvr.storage.1.4.0.nupkg.sha512",
+        "mallenom.dvr.storage.nuspec"
       ]
     },
     "mallenom.framework/2.8.0": {
@@ -1505,32 +1939,28 @@
         "mallenom.imaging.compressed.nuspec"
       ]
     },
-    "mallenom.math/1.5.0": {
-      "sha512": "KkZz9iRYcT6lRX8soq0w6QvpBd8Wt7S1Myfl2QQoix8RytOcpsnaCYYIszVYYGyUfUNTliwDsT3fliMGOxDfuA==",
+    "mallenom.ipl/1.7.0": {
+      "sha512": "9NQ3CDk4gwkXz8L2XhWQWNdgRB5AUAFh2CJZKd/PSr6V7uH4gXp/UOcAUosVtLC3BSF+o8zNDDrfaasPoqZRxw==",
       "type": "package",
-      "path": "mallenom.math/1.5.0",
+      "path": "mallenom.ipl/1.7.0",
       "files": [
-        "lib/net45/mallenom.math.dll",
-        "lib/net45/mallenom.math.pdb",
-        "lib/net45/mallenom.math.xml",
-        "mallenom.math.1.5.0.nupkg.sha512",
-        "mallenom.math.nuspec"
+        "lib/net45/mallenom.ipl.dll",
+        "lib/net45/mallenom.ipl.pdb",
+        "lib/net45/mallenom.ipl.xml",
+        "mallenom.ipl.1.7.0.nupkg.sha512",
+        "mallenom.ipl.nuspec"
       ]
     },
-    "mallenom.neuronet/2.5.0": {
-      "sha512": "OGsqHzzucGszHF0tdf6zk3Dc13LshVWZpXd4W882uV+Jkc9RTMjdMc79zj1Q/Rq8guFibGtqysglzraXVg/bIw==",
+    "mallenom.modbus/1.1.0": {
+      "sha512": "2RXCxh3gcooCi1DHFffps/uNkEJpgHad/CfNvepT+W8g7WOAtHI3kZGk0u4mGKsUPelm4KGlUGQcqF/EJLNn+Q==",
       "type": "package",
-      "path": "mallenom.neuronet/2.5.0",
+      "path": "mallenom.modbus/1.1.0",
       "files": [
-        "lib/net45/mallenom.neuronet.dll",
-        "lib/net45/mallenom.neuronet.dll.metagen",
-        "lib/net45/mallenom.neuronet.xml",
-        "lib_x64/net45/mallenom.neuronet.dll",
-        "lib_x64/net45/mallenom.neuronet.dll.metagen",
-        "lib_x64/net45/mallenom.neuronet.xml",
-        "mallenom.neuronet.2.5.0.nupkg.sha512",
-        "mallenom.neuronet.nuspec",
-        "readme.txt"
+        "lib/mallenom.modbus.dll",
+        "lib/mallenom.modbus.pdb",
+        "lib/mallenom.modbus.xml",
+        "mallenom.modbus.1.1.0.nupkg.sha512",
+        "mallenom.modbus.nuspec"
       ]
     },
     "mallenom.video/4.8.0": {
@@ -1543,6 +1973,32 @@
         "lib/net45/mallenom.video.xml",
         "mallenom.video.4.8.0.nupkg.sha512",
         "mallenom.video.nuspec",
+        "readme.txt"
+      ]
+    },
+    "mallenom.video.avi/4.8.0": {
+      "sha512": "SQ5tRGHkhor5KnZRM6Vg/M9dh8CAlPUnmttOEy9rFxWgTvqsRf4pTGTXloyXb0FZWYY0DQIp89HWuRhjk8lHDA==",
+      "type": "package",
+      "path": "mallenom.video.avi/4.8.0",
+      "files": [
+        "lib/net45/mallenom.video.avi.dll",
+        "lib/net45/mallenom.video.avi.pdb",
+        "lib/net45/mallenom.video.avi.xml",
+        "mallenom.video.avi.4.8.0.nupkg.sha512",
+        "mallenom.video.avi.nuspec",
+        "readme.txt"
+      ]
+    },
+    "mallenom.video.avi.compressed/4.8.0": {
+      "sha512": "em8+951DwGfAPDDqtkkh2Lz1+niXo2H1fPeqnJbGONHVuTucL9lp9zwJUJlLG+UOZvXh5OYi3PqynQFB4iLR7Q==",
+      "type": "package",
+      "path": "mallenom.video.avi.compressed/4.8.0",
+      "files": [
+        "lib/net45/mallenom.video.avi.compressed.dll",
+        "lib/net45/mallenom.video.avi.compressed.pdb",
+        "lib/net45/mallenom.video.avi.compressed.xml",
+        "mallenom.video.avi.compressed.4.8.0.nupkg.sha512",
+        "mallenom.video.avi.compressed.nuspec",
         "readme.txt"
       ]
     },
@@ -1559,18 +2015,6 @@
         "mallenom.video.dshow.nuspec"
       ]
     },
-    "mallenom.video.ffmpeg/1.2.1": {
-      "sha512": "tkNFH4CQYfK1R+3ucjwPXR8cptccf1AG0ffhEQhzpO/nh/ptbuTrtihrBkDBmgBGE2Pd65BOtnPuiLtbpEgB2g==",
-      "type": "package",
-      "path": "mallenom.video.ffmpeg/1.2.1",
-      "files": [
-        "lib/net45/mallenom.video.ffmpeg.dll",
-        "lib/net45/mallenom.video.ffmpeg.pdb",
-        "lib/net45/mallenom.video.ffmpeg.xml",
-        "mallenom.video.ffmpeg.1.2.1.nupkg.sha512",
-        "mallenom.video.ffmpeg.nuspec"
-      ]
-    },
     "mallenom.video.ipcam/1.9.0": {
       "sha512": "ZQw06kMIyf0Tb2IQ8Rg8dP/BAtIF5rDDkQsF0CMtHPpJhh8NLs9bkUMV6io0Zlh5x9/9MDWcsfgqf/mlhDGc3w==",
       "type": "package",
@@ -1582,6 +2026,22 @@
         "mallenom.video.ipcam.1.9.0.nupkg.sha512",
         "mallenom.video.ipcam.nuspec",
         "readme.txt"
+      ]
+    },
+    "mallenom.video.ipcam.bosch/1.9.0": {
+      "sha512": "WUJBLon/4SwLuWBnS+Ttl0ajaH4XIIQKbb3XFUwzqKmeVkT08xUaO2Yy37YC2Jz51hvT9+cHAi3v3p/fPs4OaA==",
+      "type": "package",
+      "path": "mallenom.video.ipcam.bosch/1.9.0",
+      "files": [
+        "lib/net45/Bosch.VideoSDK.GCALib.dll",
+        "lib/net45/Bosch.VideoSDK.StreamItemsLib.dll",
+        "lib/net45/mallenom.video.ipcam.bosch.dll",
+        "lib/net45/mallenom.video.ipcam.bosch.pdb",
+        "lib/net45/mallenom.video.ipcam.bosch.xml",
+        "mallenom.video.ipcam.bosch.1.9.0.nupkg.sha512",
+        "mallenom.video.ipcam.bosch.nuspec",
+        "readme.txt",
+        "tools/install.ps1"
       ]
     },
     "mallenom.video.ipcam.dshow/1.9.0": {
@@ -1597,138 +2057,144 @@
         "readme.txt"
       ]
     },
-    "NUnit/3.7.1": {
-      "sha512": "vUTICvR3uqw6OTOcwsfz22KjVk8xFcNdz22XnGPL3itQU7+HSV+8xySjGmVkMWZ4IPbaV/+T33C775EEtiEYIA==",
+    "mallenom.video.ipcam.linia/1.9.0": {
+      "sha512": "lG1XVthC8DWv80+5rcienSChelqeKjyinIQmG8f2ERUqFU31aLweFlfpFPvoos72N1r+UhdoxKL5uLB9elp/cA==",
       "type": "package",
-      "path": "nunit/3.7.1",
+      "path": "mallenom.video.ipcam.linia/1.9.0",
       "files": [
-        "CHANGES.md",
-        "LICENSE.txt",
-        "NOTICES.txt",
-        "lib/net20/NUnit.System.Linq.dll",
-        "lib/net20/nunit.framework.dll",
-        "lib/net20/nunit.framework.xml",
-        "lib/net35/nunit.framework.dll",
-        "lib/net35/nunit.framework.xml",
-        "lib/net40/nunit.framework.dll",
-        "lib/net40/nunit.framework.xml",
-        "lib/net45/nunit.framework.dll",
-        "lib/net45/nunit.framework.xml",
-        "lib/netstandard1.3/nunit.framework.dll",
-        "lib/netstandard1.3/nunit.framework.xml",
-        "lib/netstandard1.6/nunit.framework.dll",
-        "lib/netstandard1.6/nunit.framework.xml",
-        "nunit.3.7.1.nupkg.sha512",
-        "nunit.nuspec"
+        "lib/net45/mallenom.video.ipcam.linia.dll",
+        "lib/net45/mallenom.video.ipcam.linia.pdb",
+        "lib/net45/mallenom.video.ipcam.linia.xml",
+        "mallenom.video.ipcam.linia.1.9.0.nupkg.sha512",
+        "mallenom.video.ipcam.linia.nuspec",
+        "readme.txt"
       ]
     },
-    "recar2.ui/0.2.0": {
-      "sha512": "XbVABdwHinPI6usAUjDyAcIUhyJQsWGa+BVHKVp9e+PtC1H1A0eNYZnDDLqzwazkiCTB8/RQI9IFw5mSEfBJRw==",
+    "mallenom.video.pci/3.2.0": {
+      "sha512": "YgWyyuUO6s1VFjDuivO8PrAGfB6Aya8k3n0gqYlK5YMYHPBbx5bsVX8b8SRpr4La45+XcAUflPFAewFMAqLIAg==",
       "type": "package",
-      "path": "recar2.ui/0.2.0",
+      "path": "mallenom.video.pci/3.2.0",
       "files": [
-        "lib/net45/recar2.ui.dll",
-        "lib/net45/recar2.ui.pdb",
-        "lib/net45/recar2.ui.xml",
-        "recar2.ui.0.2.0.nupkg.sha512",
-        "recar2.ui.nuspec"
+        "lib/net45/mallenom.video.pci.dll",
+        "lib/net45/mallenom.video.pci.pdb",
+        "lib/net45/mallenom.video.pci.xml",
+        "mallenom.video.pci.3.2.0.nupkg.sha512",
+        "mallenom.video.pci.nuspec"
       ]
     },
-    "recar2.algorithms/1.0.0": {
-      "type": "project",
-      "path": "../../recar2.algorithms.prj/recar2.algorithms.csproj",
-      "msbuildProject": "../../recar2.algorithms.prj/recar2.algorithms.csproj"
+    "mallenom.video.pylon/0.6.0": {
+      "sha512": "5CIbeGDxwNj6Qwc52uJxghKk1kwjwP+QZUsuashj6LXin/oPQSZMM2qeKDm16Oia7O2pJSvBANMn4aNU7Dbddw==",
+      "type": "package",
+      "path": "mallenom.video.pylon/0.6.0",
+      "files": [
+        "lib/net45/Basler.Pylon.dll",
+        "lib/net45/mallenom.video.pylon.dll",
+        "lib/net45/mallenom.video.pylon.pdb",
+        "lib/net45/mallenom.video.pylon.xml",
+        "lib_x64/net45/Basler.Pylon.dll",
+        "lib_x64/net45/mallenom.video.pylon.dll",
+        "lib_x64/net45/mallenom.video.pylon.pdb",
+        "lib_x64/net45/mallenom.video.pylon.xml",
+        "mallenom.video.pylon.0.6.0.nupkg.sha512",
+        "mallenom.video.pylon.nuspec",
+        "readme.txt"
+      ]
     },
-    "recar2.algorithms.ui/1.0.0": {
-      "type": "project",
-      "path": "../../recar2.algorithms.ui.prj/recar2.algorithms.ui.csproj",
-      "msbuildProject": "../../recar2.algorithms.ui.prj/recar2.algorithms.ui.csproj"
+    "mallenom.video.vlc/0.2.0": {
+      "sha512": "YSAW4rChiyWNGbASLy5aEaZ/W3VEN5D11pDZtZHlEbZdx0HtajW45A84SHSQAXTJBn0q/3ECdAaz+WhuMi3EpQ==",
+      "type": "package",
+      "path": "mallenom.video.vlc/0.2.0",
+      "files": [
+        "lib/net45/mallenom.video.vlc.dll",
+        "lib/net45/mallenom.video.vlc.pdb",
+        "lib/net45/mallenom.video.vlc.xml",
+        "mallenom.video.vlc.0.2.0.nupkg.sha512",
+        "mallenom.video.vlc.nuspec"
+      ]
     },
-    "recar2.composite/1.0.0": {
-      "type": "project",
-      "path": "../../recar2.composite.prj/recar2.composite.csproj",
-      "msbuildProject": "../../recar2.composite.prj/recar2.composite.csproj"
+    "mallenom.videoserver.client/0.9.1": {
+      "sha512": "4Dt9Zlp97ouS074VK2PChlN1DJFIdf2EmXPkntAiSmi7ZtYhAASu2M+fj14QPyljnLp3vI8s7CmC0t5rBleNoQ==",
+      "type": "package",
+      "path": "mallenom.videoserver.client/0.9.1",
+      "files": [
+        "lib/net45/mallenom.videoserver.client.dll",
+        "lib/net45/mallenom.videoserver.client.pdb",
+        "lib/net45/mallenom.videoserver.client.xml",
+        "lib/net45/mallenom.videoserver.contracts.dll",
+        "lib/net45/mallenom.videoserver.contracts.pdb",
+        "lib/net45/mallenom.videoserver.contracts.xml",
+        "mallenom.videoserver.client.0.9.1.nupkg.sha512",
+        "mallenom.videoserver.client.nuspec"
+      ]
     },
-    "recar2.convenient/1.0.0": {
-      "type": "project",
-      "path": "../../recar2.convenient.prj/recar2.convenient.csproj",
-      "msbuildProject": "../../recar2.convenient.prj/recar2.convenient.csproj"
+    "mallenom.vlc/0.2.0": {
+      "sha512": "CgYP3AP+/QXiGzgn9imeKH5IbV+2hpL5QonosqMcOGVTGhpY0ZkXLfaSx7EYHULHHyWfw4+9yaksJZrXKlvidw==",
+      "type": "package",
+      "path": "mallenom.vlc/0.2.0",
+      "files": [
+        "lib/net45/mallenom.vlc.dll",
+        "lib/net45/mallenom.vlc.pdb",
+        "lib/net45/mallenom.vlc.xml",
+        "mallenom.vlc.0.2.0.nupkg.sha512",
+        "mallenom.vlc.nuspec"
+      ]
     },
-    "recar2.decisions/1.0.0": {
+    "arscis.controls/1.0.0": {
       "type": "project",
-      "path": "../../recar2.decisions.prj/recar2.decisions.csproj",
-      "msbuildProject": "../../recar2.decisions.prj/recar2.decisions.csproj"
+      "path": "../../../UI/arscis.controls.prj/arscis.controls.csproj",
+      "msbuildProject": "../../../UI/arscis.controls.prj/arscis.controls.csproj"
     },
-    "recar2.models/1.0.0": {
+    "arscis.fox.alg.common/1.0.0": {
       "type": "project",
-      "path": "../../models/recar2.models.prj/recar2.models.csproj",
-      "msbuildProject": "../../models/recar2.models.prj/recar2.models.csproj"
+      "path": "../../../Core/arscis.fox.alg.common.prj/arscis.fox.alg.common.csproj",
+      "msbuildProject": "../../../Core/arscis.fox.alg.common.prj/arscis.fox.alg.common.csproj"
     },
-    "recar2.models.loader/1.0.0": {
+    "arscis.fox.common/1.0.0": {
       "type": "project",
-      "path": "../../recar2.models.loader.prj/recar2.models.loader.csproj",
-      "msbuildProject": "../../recar2.models.loader.prj/recar2.models.loader.csproj"
+      "path": "../../../Core/arscis.fox.common.prj/arscis.fox.common.csproj",
+      "msbuildProject": "../../../Core/arscis.fox.common.prj/arscis.fox.common.csproj"
     },
-    "recar2.models.noenc/1.0.0": {
+    "arscis.fox.objects/1.0.0": {
       "type": "project",
-      "path": "../../models/recar2.models.noenc.prj/recar2.models.noenc.csproj",
-      "msbuildProject": "../../models/recar2.models.noenc.prj/recar2.models.noenc.csproj"
+      "path": "../../../Core/arscis.fox.objects.prj/arscis.fox.objects.csproj",
+      "msbuildProject": "../../../Core/arscis.fox.objects.prj/arscis.fox.objects.csproj"
     },
-    "recar2.motion/1.0.0": {
+    "arscis.fox.record/1.0.0": {
       "type": "project",
-      "path": "../../recar2.motion.prj/recar2.motion.csproj",
-      "msbuildProject": "../../recar2.motion.prj/recar2.motion.csproj"
+      "path": "../../../Core/arscis.fox.record.prj/arscis.fox.record.csproj",
+      "msbuildProject": "../../../Core/arscis.fox.record.prj/arscis.fox.record.csproj"
     },
-    "recar2.platelocalization/1.0.0": {
+    "arscis.fox.sensors/1.0.0": {
       "type": "project",
-      "path": "../../recar2.platelocalization.prj/recar2.platelocalization.csproj",
-      "msbuildProject": "../../recar2.platelocalization.prj/recar2.platelocalization.csproj"
+      "path": "../../../Core/arscis.fox.sensors.prj/arscis.fox.sensors.csproj",
+      "msbuildProject": "../../../Core/arscis.fox.sensors.prj/arscis.fox.sensors.csproj"
     },
-    "recar2.platestencil/1.0.0": {
+    "arscis.fox.videoinput/1.0.0": {
       "type": "project",
-      "path": "../../recar2.platestencil.prj/recar2.platestencil.csproj",
-      "msbuildProject": "../../recar2.platestencil.prj/recar2.platestencil.csproj"
+      "path": "../../../Core/arscis.fox.video.prj/arscis.fox.videoinput.csproj",
+      "msbuildProject": "../../../Core/arscis.fox.video.prj/arscis.fox.videoinput.csproj"
     },
-    "recar2.recogstencil/1.0.0": {
+    "arscis.greenbox/1.0.0": {
       "type": "project",
-      "path": "../../recar2.recogstencil.prj/recar2.recogstencil.csproj",
-      "msbuildProject": "../../recar2.recogstencil.prj/recar2.recogstencil.csproj"
+      "path": "../../../Sensors/arscis.greenbox.prj/arscis.greenbox.csproj",
+      "msbuildProject": "../../../Sensors/arscis.greenbox.prj/arscis.greenbox.csproj"
     },
-    "recar2.tests.common/1.0.0": {
+    "arscis.promeldku/1.0.0": {
       "type": "project",
-      "path": "../recar2.tests.common.prj/recar2.tests.common.csproj",
-      "msbuildProject": "../recar2.tests.common.prj/recar2.tests.common.csproj"
-    },
-    "recar2.vehicledetection/1.0.0": {
-      "type": "project",
-      "path": "../../recar2.vehicledetection.prj/recar2.vehicledetection.csproj",
-      "msbuildProject": "../../recar2.vehicledetection.prj/recar2.vehicledetection.csproj"
+      "path": "../../../Sensors/arscis.promeldku.prj/arscis.promeldku.csproj",
+      "msbuildProject": "../../../Sensors/arscis.promeldku.prj/arscis.promeldku.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7": [
-      "mallenom.ffmpeg >= 1.2.1",
-      "mallenom.imaging.compressed >= 3.7.0",
-      "mallenom.neuronet >= 2.5.0",
-      "mallenom.video >= 4.8.0",
-      "mallenom.video.dshow >= 3.2.0",
-      "mallenom.video.ffmpeg >= 1.2.1",
-      "mallenom.video.ipcam >= 1.9.0",
-      "mallenom.video.ipcam.dshow >= 1.9.0",
-      "recar2.algorithms >= 1.0.0",
-      "recar2.algorithms.ui >= 1.0.0",
-      "recar2.composite >= 1.0.0",
-      "recar2.convenient >= 1.0.0",
-      "recar2.decisions >= 1.0.0",
-      "recar2.models >= 1.0.0",
-      "recar2.models.loader >= 1.0.0",
-      "recar2.models.noenc >= 1.0.0",
-      "recar2.motion >= 1.0.0",
-      "recar2.platelocalization >= 1.0.0",
-      "recar2.platestencil >= 1.0.0",
-      "recar2.recogstencil >= 1.0.0",
-      "recar2.tests.common >= 1.0.0",
-      "recar2.vehicledetection >= 1.0.0"
+      "arscis.common >= 1.13.0",
+      "arscis.controls >= 1.0.0",
+      "arscis.fox.common >= 1.0.0",
+      "arscis.fox.objects >= 1.0.0",
+      "arscis.fox.record >= 1.0.0",
+      "arscis.fox.sensors >= 1.0.0",
+      "arscis.fox.videoinput >= 1.0.0",
+      "arscis.greenbox >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1737,11 +2203,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\automarshal\\algorithms\\src\\tests\\recar2.recogstencil.uitests.prj\\recar2.recogstencil.tests.ui.csproj",
-      "projectName": "recar2.recogstencil.tests.ui",
-      "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\tests\\recar2.recogstencil.uitests.prj\\recar2.recogstencil.tests.ui.csproj",
+      "projectUniqueName": "D:\\Projects\\arscis\\sunit\\src\\Utility\\HWDiagnostics\\arscis.fox.hwdiagnostics.prj\\arscis.fox.hwdiagnostics.csproj",
+      "projectName": "arscis.fox.hwdiagnostics",
+      "projectPath": "D:\\Projects\\arscis\\sunit\\src\\Utility\\HWDiagnostics\\arscis.fox.hwdiagnostics.prj\\arscis.fox.hwdiagnostics.csproj",
       "packagesPath": "C:\\Users\\kiple\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\automarshal\\algorithms\\src\\tests\\recar2.recogstencil.uitests.prj\\obj\\",
+      "outputPath": "D:\\Projects\\arscis\\sunit\\src\\Utility\\HWDiagnostics\\arscis.fox.hwdiagnostics.prj\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1759,120 +2225,43 @@
       "frameworks": {
         "net47": {
           "projectReferences": {
-            "D:\\Projects\\automarshal\\algorithms\\src\\models\\recar2.models.noenc.prj\\recar2.models.noenc.csproj": {
-              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\models\\recar2.models.noenc.prj\\recar2.models.noenc.csproj"
+            "D:\\Projects\\arscis\\sunit\\src\\Core\\arscis.fox.common.prj\\arscis.fox.common.csproj": {
+              "projectPath": "D:\\Projects\\arscis\\sunit\\src\\Core\\arscis.fox.common.prj\\arscis.fox.common.csproj"
             },
-            "D:\\Projects\\automarshal\\algorithms\\src\\models\\recar2.models.prj\\recar2.models.csproj": {
-              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\models\\recar2.models.prj\\recar2.models.csproj"
+            "D:\\Projects\\arscis\\sunit\\src\\Core\\arscis.fox.objects.prj\\arscis.fox.objects.csproj": {
+              "projectPath": "D:\\Projects\\arscis\\sunit\\src\\Core\\arscis.fox.objects.prj\\arscis.fox.objects.csproj"
             },
-            "D:\\Projects\\automarshal\\algorithms\\src\\recar2.algorithms.ui.prj\\recar2.algorithms.ui.csproj": {
-              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\recar2.algorithms.ui.prj\\recar2.algorithms.ui.csproj"
+            "D:\\Projects\\arscis\\sunit\\src\\Sensors\\arscis.greenbox.prj\\arscis.greenbox.csproj": {
+              "projectPath": "D:\\Projects\\arscis\\sunit\\src\\Sensors\\arscis.greenbox.prj\\arscis.greenbox.csproj"
             },
-            "D:\\Projects\\automarshal\\algorithms\\src\\recar2.convenient.prj\\recar2.convenient.csproj": {
-              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\recar2.convenient.prj\\recar2.convenient.csproj"
+            "D:\\Projects\\arscis\\sunit\\src\\UI\\arscis.controls.prj\\arscis.controls.csproj": {
+              "projectPath": "D:\\Projects\\arscis\\sunit\\src\\UI\\arscis.controls.prj\\arscis.controls.csproj"
             },
-            "D:\\Projects\\automarshal\\algorithms\\src\\recar2.platelocalization.prj\\recar2.platelocalization.csproj": {
-              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\recar2.platelocalization.prj\\recar2.platelocalization.csproj"
+            "D:\\Projects\\arscis\\sunit\\src\\Core\\arscis.fox.sensors.prj\\arscis.fox.sensors.csproj": {
+              "projectPath": "D:\\Projects\\arscis\\sunit\\src\\Core\\arscis.fox.sensors.prj\\arscis.fox.sensors.csproj"
             },
-            "D:\\Projects\\automarshal\\algorithms\\src\\recar2.composite.prj\\recar2.composite.csproj": {
-              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\recar2.composite.prj\\recar2.composite.csproj"
+            "D:\\Projects\\arscis\\sunit\\src\\Core\\arscis.fox.video.prj\\arscis.fox.videoinput.csproj": {
+              "projectPath": "D:\\Projects\\arscis\\sunit\\src\\Core\\arscis.fox.video.prj\\arscis.fox.videoinput.csproj"
             },
-            "D:\\Projects\\automarshal\\algorithms\\src\\recar2.algorithms.prj\\recar2.algorithms.csproj": {
-              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\recar2.algorithms.prj\\recar2.algorithms.csproj"
-            },
-            "D:\\Projects\\automarshal\\algorithms\\src\\recar2.decisions.prj\\recar2.decisions.csproj": {
-              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\recar2.decisions.prj\\recar2.decisions.csproj"
-            },
-            "D:\\Projects\\automarshal\\algorithms\\src\\recar2.models.loader.prj\\recar2.models.loader.csproj": {
-              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\recar2.models.loader.prj\\recar2.models.loader.csproj"
-            },
-            "D:\\Projects\\automarshal\\algorithms\\src\\recar2.motion.prj\\recar2.motion.csproj": {
-              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\recar2.motion.prj\\recar2.motion.csproj"
-            },
-            "D:\\Projects\\automarshal\\algorithms\\src\\recar2.platestencil.prj\\recar2.platestencil.csproj": {
-              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\recar2.platestencil.prj\\recar2.platestencil.csproj"
-            },
-            "D:\\Projects\\automarshal\\algorithms\\src\\recar2.recogstencil.prj\\recar2.recogstencil.csproj": {
-              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\recar2.recogstencil.prj\\recar2.recogstencil.csproj"
-            },
-            "D:\\Projects\\automarshal\\algorithms\\src\\recar2.vehicledetection.prj\\recar2.vehicledetection.csproj": {
-              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\recar2.vehicledetection.prj\\recar2.vehicledetection.csproj"
-            },
-            "D:\\Projects\\automarshal\\algorithms\\src\\tests\\recar2.tests.common.prj\\recar2.tests.common.csproj": {
-              "projectPath": "D:\\Projects\\automarshal\\algorithms\\src\\tests\\recar2.tests.common.prj\\recar2.tests.common.csproj"
+            "D:\\Projects\\arscis\\sunit\\src\\Core\\arscis.fox.record.prj\\arscis.fox.record.csproj": {
+              "projectPath": "D:\\Projects\\arscis\\sunit\\src\\Core\\arscis.fox.record.prj\\arscis.fox.record.csproj"
             }
           }
         }
       }
     },
     "dependencies": {
-      "mallenom.ffmpeg": {
+      "arscis.common": {
         "target": "Package",
-        "version": "1.2.1"
-      },
-      "mallenom.imaging.compressed": {
-        "target": "Package",
-        "version": "3.7.0"
-      },
-      "mallenom.neuronet": {
-        "target": "Package",
-        "version": "2.5.0"
-      },
-      "mallenom.video": {
-        "target": "Package",
-        "version": "4.8.0"
-      },
-      "mallenom.video.dshow": {
-        "target": "Package",
-        "version": "3.2.0"
-      },
-      "mallenom.video.ffmpeg": {
-        "target": "Package",
-        "version": "1.2.1"
-      },
-      "mallenom.video.ipcam": {
-        "target": "Package",
-        "version": "1.9.0"
-      },
-      "mallenom.video.ipcam.dshow": {
-        "target": "Package",
-        "version": "1.9.0"
+        "version": "1.13.0"
       }
     },
     "frameworks": {
       "net47": {
         "dependencies": {
-          "mallenom.ffmpeg": {
+          "arscis.common": {
             "target": "Package",
-            "version": "1.2.1"
-          },
-          "mallenom.imaging.compressed": {
-            "target": "Package",
-            "version": "3.7.0"
-          },
-          "mallenom.neuronet": {
-            "target": "Package",
-            "version": "2.5.0"
-          },
-          "mallenom.video": {
-            "target": "Package",
-            "version": "4.8.0"
-          },
-          "mallenom.video.dshow": {
-            "target": "Package",
-            "version": "3.2.0"
-          },
-          "mallenom.video.ffmpeg": {
-            "target": "Package",
-            "version": "1.2.1"
-          },
-          "mallenom.video.ipcam": {
-            "target": "Package",
-            "version": "1.9.0"
-          },
-          "mallenom.video.ipcam.dshow": {
-            "target": "Package",
-            "version": "1.9.0"
+            "version": "1.13.0"
           }
         }
       }

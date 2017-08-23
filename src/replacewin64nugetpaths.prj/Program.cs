@@ -57,14 +57,16 @@ namespace ReplaceWin64NugetPaths
 		{
 			foreach(JProperty library in libraries)
 			{
-				Console.WriteLine(library.Name);
+				//Console.WriteLine(library.Name);
 				var files = library.Value["files"];
 				if(files != null)
+				{
 					foreach(var file in files)
 					{
 						var filename = file.Value<string>();
 						if(RxLibraries.IsMatch(filename)) yield return (name: library.Name, file: filename);
 					}
+				}
 			}
 		}
 
@@ -82,16 +84,29 @@ namespace ReplaceWin64NugetPaths
 			return null;
 		}
 
-		private static void Replace(JProperty x64Target, IReadOnlyCollection<(string name, string file)> libraries)
+		private static void Replace(JProperty target, IReadOnlyCollection<(string name, string file)> libraries)
 		{
-			foreach(JProperty package in x64Target.Value)
-				if(libraries.Any(lib => lib.name == package.Name))
+			foreach(JProperty package in target.Value)
+			{
+				foreach(var library in libraries.Where(lib => lib.name == package.Name))
 				{
-					var libarary = libraries.FirstOrDefault(lib => lib.name == package.Name);
-					foreach(JProperty f in package.Value["compile"].ToArray()) f.Replace(new JProperty(libarary.file, new JObject()));
-					foreach(JProperty f in package.Value["runtime"].ToArray()) f.Replace(new JProperty(libarary.file, new JObject()));
-					Console.WriteLine($"Replace {libarary.file}.");
+					foreach(JProperty f in package.Value["compile"].ToArray())
+					{
+						if(Path.GetFileName(f.Name) == Path.GetFileName(library.file))
+						{
+							f.Replace(new JProperty(library.file, new JObject()));
+						}
+					}
+					foreach(JProperty f in package.Value["runtime"].ToArray())
+					{
+						if(Path.GetFileName(f.Name) == Path.GetFileName(library.file))
+						{
+							f.Replace(new JProperty(library.file, new JObject()));
+						}
+					}
+					Console.WriteLine($"Replace {library.file} for {target.Name}.");
 				}
+			}
 		}
 	}
 }
